@@ -1,0 +1,29 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+#root{
+  width: 100%;
+  height: 100%;
+}
+.app{
+  width: 100%;
+  height: 100%;
+}
+.calendar{
+  width: 100%;
+  height: 80%;
+  /* display: flex; */
+}
+.car{
+  width: 20%;
+  height: 86%;
+  position: absolute;
+  right: 0;
+  top: 13%;
+}

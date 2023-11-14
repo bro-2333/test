@@ -1,0 +1,11 @@
+.MasterBox{
+    width: 1200px;
+    height: 200px;
+    overflow: hidden;
+}
+.boxList{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}

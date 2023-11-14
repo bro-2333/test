@@ -1,0 +1,63 @@
+.FooterBox{
+    width: 100%;
+    height: 100%;
+}
+.headTop{
+    width: 100%;
+    height: 70%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+.leftBox{
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+}
+.mainBox{
+    width: 60%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    display: flex;
+}
+.rightBox{
+    width: 20%;
+    height: 100%;
+}
+.box{
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.footerBox{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+    flex-wrap: wrap;
+}
+.strong{
+    font-size: 18px;
+    font-weight: bold;
+}
+.ulList{
+    margin: 20px;
+    margin-left: 27px;
+}
+.ulList li{
+    line-height: 45px;
+}
+.QRCode{
+    margin: 50px auto;
+    text-align: center;
+}
+.mainFooter{
+    width: 100%;
+    height: 15%;
+    border-bottom: 1px solid #ccc;
+}
+.footer2{
+    width: 100%;
+    height: 10%;
+}
