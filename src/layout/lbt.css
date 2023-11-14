@@ -1,0 +1,40 @@
+.carousel-container {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+  /* Other styles */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* Background color for the circular button */
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    padding: 10px; /* Adjust the padding for the button size */
+    color: #fff; /* Color of the arrow icon */
+}
+
+.left-arrow {
+    left: -20px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.left-arrow:hover{
+    background-color: #fff;
+    color: #1261FF;
+}
+
+.right-arrow:hover {
+    background-color: #fff;
+    color: #1261FF;
+}

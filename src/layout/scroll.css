@@ -1,0 +1,43 @@
+.Picture_List{
+    width: 100%;
+    height: 140px;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Picture_List img {
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    cursor: pointer;
+}
+
+.Picture_List img:hover {
+    transform: translateY(-10px); /* Shift image 10px upward on hover */
+}
+
+/* Left button */
+.slick-prev,
+.slick-next {
+    background-color: #f4f4f4; /* Set the background color to white */
+    border-radius: 50%; /* Makes the button circular */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+}
+
+/* Left button arrow */
+.slick-prev::before {
+    content: '❮'; /* Custom arrow character for left */
+    color: black; /* Set arrow color to black */
+}
+
+/* Right button arrow */
+.slick-next::before {
+    content: '❯'; /* Custom arrow character for right */
+    color: black; /* Set arrow color to black */
+}
