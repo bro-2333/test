@@ -1,11 +1,45 @@
-.MasterBox{
+.Mac{
     width: 1200px;
     height: 200px;
     overflow: hidden;
 }
+.MasterBox{
+    display: flex;
+    height: 100%;
+    transition: transform 1s ease; /* 添加过渡效果，0.3秒的过渡时间，使用ease函数 */
+}
 .boxList{
-    width: 20%;
+    width: 21%;
     height: 100%;
     text-align: center;
-    float: left;
+    flex: 0 0 auto; /* flex属性的简写形式，第一个值是flex-grow，第二个值是flex-shrink，第三个值是flex-basis */
+}
+.leftBox {
+    position:absolute;
+    left:3%;
+    top:9%;
+    width:50px;
+    height:50px;
+    text-align:center;
+    border-radius:50%;
+    border: none;
+}
+.rightBox {
+    position:absolute;
+    right: 25%;
+    top:9%;
+    width:50px;
+    height:50px;
+    text-align:center;
+    border-radius:50%;
+    border: none;
+}
+.leftHid{
+    display: none;
+}
+.right{
+    display: none;
+}
+.rightHid{
+    display: none;
 }

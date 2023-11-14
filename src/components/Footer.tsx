@@ -25,7 +25,7 @@ function Footer() {
     <div className='FooterBox'>
       <div className='headTop'>
         <div className='leftBox'>
-          <img src="../../public/new_logo.svg" alt="" style={{width:'80%', height:'20%',marginLeft:'5%'}}/>
+          <img src="../../public/zwb/new_logo.svg" alt="" style={{width:'80%', height:'20%',marginLeft:'5%'}}/>
           <span style={{display:'block',marginLeft:'5%',marginTop:'-5%',fontSize:'16px'}}>全球1000强，中国100强网站</span>
           <div className='footerBox'>
                 {
@@ -72,8 +72,8 @@ function Footer() {
       <div className='footer2'>
           <span style={{display:'block',lineHeight:'30px',marginTop:'10px'}}>© 2023 eqxiu.com. All rights reserved 北京中网易企秀科技有限公司</span>
           <span style={{lineHeight:'30px',marginTop:'10px'}}>电信与信息服务业务经营许可证：京ICP证160037号 | 京ICP备15056244号 | 京公网安备11010802018300</span>
-          <img src="../../public/brand_bottom_large.webp" style={{width:'100px',height:'38px',float:'right',marginRight:'10px'}} alt="" />
-          <img src="../../public/kexin.svg" style={{width:'100px',height:'45px',float:'right',marginRight:'10px'}} alt="" />
+          <img src="../../public/zwb/brand_bottom_large.webp" style={{width:'100px',height:'38px',float:'right',marginRight:'10px'}} alt="" />
+          <img src="../../public/zwb/kexin.svg" style={{width:'100px',height:'45px',float:'right',marginRight:'10px'}} alt="" />
       </div>
     </div>
   )
