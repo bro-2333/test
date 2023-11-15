@@ -92,7 +92,7 @@ function AllMainRightCon() {
         </div>
       </div>
       <div className="all_footer_box">
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
 

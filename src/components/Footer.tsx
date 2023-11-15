@@ -24,10 +24,10 @@ function Footer() {
   return (
     <div className='FooterBox'>
       <div className='headTop'>
-        <div className='leftBox'>
+        <div className='leftBoxZwb'>
           <img src="../../public/zwb/new_logo.svg" alt="" style={{width:'80%', height:'20%',marginLeft:'5%'}}/>
           <span style={{display:'block',marginLeft:'5%',marginTop:'-5%',fontSize:'14px'}}>全球1000强，中国100强网站</span>
-          <div className='footerBox'>
+          <div className='footerBoxZwb'>
                 {
                   list.map((item:any)=>{
                     return <div className='box'>
@@ -38,7 +38,7 @@ function Footer() {
                 }
           </div>
         </div>
-        <div className='mainBox'>
+        <div className='mainBoxZwb'>
           {
             dataList.map((item:any)=>{
               return <ul className='ulList'>
@@ -53,7 +53,7 @@ function Footer() {
             })
           }
         </div>
-        <div className='rightBox'>
+        <div className='rightBoxZwb'>
           <MobileOutlined style={{fontSize:'25px',marginLeft:'10px',marginTop:'10px'}}/><span style={{fontSize:'14px'}}>手机APP</span>
           <p style={{marginLeft:'10px',lineHeight:'25px',marginTop:'10px',fontSize:'12px'}}>扫码注册 3分钟做出好设计</p>
           <div className='QRCode'>
@@ -65,7 +65,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className='mainFooter'>
+      <div className='mainFooterZwb'>
           <h3 style={{color:'blue',marginTop:'10px',marginLeft:'10px',fontSize:'14px'}}>友情链接</h3>
           <span style={{marginLeft:'10px',marginTop:'2%',display:'block',fontSize:'12px'}}>热门模板</span>
       </div>

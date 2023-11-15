@@ -19,9 +19,9 @@ function Master() {
   const [scrollstup,setScrollStup] = useState(0) 
 
   const handleChange = (type:string) => {
+    console.log('111',11);
     const container = containerRef.current
     let newWidth =containerRef.current?.children[0].clientWidth*8 -container?.clientWidth
-    console.log('111',11);
     
     if(container){
       setWays(type)

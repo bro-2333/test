@@ -178,7 +178,8 @@
     line-height: 40px;
 }
 .allmain_right{
-    flex: 1;
+    max-width: 1704px;
+    min-width: 1080px;
     /* background-color: pink; */
 }
 
@@ -328,7 +329,7 @@
 /* 登录页面 */
 .login_box{
    width: 100%;
-   height: 100vh;
+   height: 100%;
     position: relative;
 }
 .Mask_box{
