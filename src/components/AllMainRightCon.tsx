@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Input, Select, Space } from 'antd';
+import LunarCalendar from 'lunar-calendar';
+import lunarFestivals from '../data/data'
 import Calendar from './Calendar';
 import Footer from './Footer';
 import Master from './Master';
@@ -19,8 +21,27 @@ function AllMainRightCon() {
   let [count, setcount]: any = useState(0);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const onSearch: any = (value: any) => console.log(value);
+  const lunarDate = LunarCalendar.solarToLunar(selectedDate.getFullYear(), selectedDate.getMonth() + 1, selectedDate.getDate());
+  const lunarMomthTime = lunarDate.lunarMonthName
+  const lunarDateTime = lunarDate.lunarDayName
+  const key = `${selectedDate.getMonth() + 1}-${selectedDate.getDate()+1}`;
+  const fistival =lunarFestivals[key].fast[0]
+  console.log(fistival);
+  
+  
   let [defaultValue, setdefaultValue] = useState('邀请函')
 
+  const calenDay = (day:number) => {
+    switch(day) {
+      case 0: return '日';
+      case 1: return '一';
+      case 2: return '二';
+      case 3: return '三';
+      case 4: return '四';
+      case 5: return '五';
+      case 6: return '六';
+    }
+  }
   // 日历
   const handleMonthChange = (change: any) => {
     const newDate = new Date(selectedDate);
@@ -60,18 +81,18 @@ function AllMainRightCon() {
           <div className="all_main_head_data_con">
             <div className="all_main_head_data_left">
               <div className="updata">
-                <span>11/</span>
-                <span style={{ fontSize: "12px" }}>14</span>
-                <span style={{ paddingLeft: "10px" }}>2023</span>
+                <span>{selectedDate.getMonth() + 1}/</span>
+                <span style={{ fontSize: "12px" }}>{selectedDate.getDate()}</span>
+                <span style={{ paddingLeft: "10px" }}>{selectedDate.getFullYear()}</span>
               </div>
               <div className="downData">
-                <span style={{ fontSize: "12px", color: "#666" }}>周二</span>
-                <span style={{ fontSize: "12px", paddingLeft: "10px", color: "#666" }}>农历十月初二</span>
+                <span style={{ fontSize: "12px", color: "#666" }}>{`周${calenDay(selectedDate.getDay())}`}</span>
+                <span style={{ fontSize: "12px", paddingLeft: "10px", color: "#666" }}>{`农历${lunarMomthTime}${lunarDateTime}`}</span>
               </div>
             </div>
             <div className="all_main_head_data_right">
               <img src="../../public/login_img/allhead1.png" alt="" />
-              <p>电影情人节</p>
+              <p>{fistival}</p>
 
             </div>
           </div>

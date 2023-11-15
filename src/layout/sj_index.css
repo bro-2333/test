@@ -270,12 +270,12 @@
     max-width: 1200px;
     max-height: 760px;
     z-index: 22;
-    background-color: pink;
-    left: 0px;
+    background-color: white;
+    right: 0;
     top: 80px;
     position: absolute;
     border-radius: 8px;
-    border: 1px solid #e6ebed;
+    border: 2px solid #eee;
     display: none;
 }
 .all_main_head_data_box:hover+.Calendar_box{
