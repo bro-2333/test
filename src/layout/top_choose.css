@@ -1,0 +1,41 @@
+.box{
+    width: 100%;
+    height: 100%;
+}
+.top{
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+}
+.top span{
+    background-color: #ccc;
+    padding: 5px;
+    border-radius: 10px;
+}
+.top span:hover{
+    color: blue;
+}
+.conbox{
+    width: 100%;
+    height: 100%;
+}
+.type{
+    height: 50px;
+    display: flex;
+    margin-left: 20px;
+}
+.type h2{
+    line-height: 50px;
+}
+.type div{
+    margin-left: 20px;
+    line-height: 50px;
+}
+.type div:hover{
+    color: blue;
+}
+.typetitle{
+    font-weight: 800;
+    font-size: 18px;
+    overflow-x: hidden;
+}
