@@ -5,7 +5,7 @@ import { Carousel } from 'antd';
 import "../layout/scroll.css"
 
 const contentStyle: React.CSSProperties = {
-    width: "300px",
+    width: "250px",
     height: "100px",
     borderRadius: "5px",
 };
