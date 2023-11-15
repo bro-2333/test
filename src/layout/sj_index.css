@@ -1,0 +1,390 @@
+
+/* headlogo */
+
+.HeadLogo_box{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.1);
+    height: 60px;
+    left: 0;
+    min-width: 1240px;
+    padding: 0 24px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 12;
+}
+.headlogo_main{
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.img_box {
+    width: 168px;
+    height: 60px;
+    position: relative;
+}
+.img_box img{
+    width: 130px;
+    height: 22px;
+    margin-top: 20px;
+}
+.logo_hover_box{
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    left: 40px;
+    top:-20px;
+    z-index: 23;
+    display: none;
+}
+.logo_hover_box img{
+    width: 100%;
+    height: 100%;
+}
+.img_box:hover .logo_hover_box{
+   display: block;
+}
+
+
+.HeadLogo_box ul {
+    flex: 1;
+    width: 600px;
+    display: flex;
+    cursor: pointer;
+}
+
+
+
+
+/* 免费模板 */
+.headlogo_main_active{
+    background: #1261ff;
+    border-radius: 0 0 4px 4px;
+    display: none;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    width: 28px;
+    top: 0;
+}
+.headlogo_main ul li{
+    /* flex: 1; */
+    width: 60px;
+    font-size: 13px;
+    line-height: 60px;
+    list-style: none;
+    margin-left: 20px;
+    color: #333;
+}
+.headlogo_main ul li:first-child{
+    position: relative;
+    font-weight: 900;
+}
+.active_box{
+     width: 70px;
+     text-align: left;
+}
+.active_box:hover .headlogo_main_active{
+    display: block;
+}
+.down{
+    color: #666;
+    font-size: 13px;
+    height: 16px;
+    position: absolute;
+    right: -12px;
+    top: 23px;
+    transform: rotateX(180deg);
+    width: 16px;
+    line-height: 18px;
+}
+.tiphot{
+    position: absolute;
+    right: -6px;
+    top: -14px;
+    z-index: 22;
+}
+.active_box:hover .down{
+ transform: rotate(0deg);
+ color: #1261ff;
+}
+.headlogo_main ul li:hover{
+    color: #1261ff;
+}
+/* 按钮盒子 */
+.button_box{
+    width: 230px;
+    margin-top: 15px;
+    position: relative;
+}
+.coupons_box{
+    position: absolute;
+    left: -65px;
+    top: 35px;
+    z-index: 23;
+    transform: bottom;
+    animation: reddong 1s linear infinite;
+}
+.coupons_box img{
+    width: 200px;
+    height: 40px;
+}
+
+/* //动画 */
+
+@keyframes reddong {
+    from{
+        transform: translateY(-20%);
+    }
+    to{
+         transform: translateY(0);
+    }
+   
+}
+/* allmainbox */
+.allmain_box{
+    width: 100%;
+    margin-top: 80px;
+    height: calc(100% - 80px);
+    display: flex;
+}
+/* 左侧盒子 */
+.allmain_left{
+    width: 200px;
+}
+.allmain_left ul li{
+    list-style: none;
+    padding-left: 40px;
+    font-size: 13px;
+    line-height: 40px;
+}
+.allmain_left ul li span{
+    margin-left: 10px;
+}
+.allmain_left ul li:hover{
+    background-color:#eef4ff;
+    font-weight: 900;
+    color: #1261ff;
+}
+.allmain_left p{
+    font-size: 10px;
+    padding-left: 40px;
+    color: #666;
+    line-height: 40px;
+}
+.allmain_right{
+    flex: 1;
+    /* background-color: pink; */
+}
+
+
+
+
+
+
+
+/* 主内容区 */
+.All_Main_Right_box{
+   width: 100%;
+   height: 100%;
+}
+.all_main_head_box{
+    width: 100%;
+    height: 60px;
+    display: flex;
+       position: relative;
+}
+.all_main_head_img{
+    width: 260px;
+    height: 72px;
+}
+.all_main_head_search_box{
+    flex: 1;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.ant-space-compact{
+    margin-left: 10px;
+}
+.ant-input-affix-wrapper{
+    width: 220px;
+    height: 32px;
+}
+.all_main_head_nav ul{
+   display: flex;
+   width: 410px;
+}
+.all_main_head_nav ul li{
+    list-style: none;
+    font-size: 12px;
+    color: #666;
+    padding:10px;
+}
+.all_main_head_nav ul li:hover{
+    color:#1261ff;
+}
+.all_main_head_img img{
+    width: 100%;
+    height: 100%;
+}
+.all_main_head_data_box{
+    width: 260px;
+    height: 72px;
+    border: 1px solid #e6ebed;;
+    cursor: pointer;
+}
+.all_main_head_data_con{
+    width: 226px;
+    height: 43px;
+    margin: 15px auto;
+    /* background-color: red; */
+    display: flex;
+    justify-content:space-between;
+}
+.all_main_head_data_right{
+    display: flex;
+ 
+}
+.all_main_head_data_right p{
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.all_main_head_data_right img{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.Calendar_box{
+    min-width: 984px;
+    max-width: 1200px;
+    max-height: 760px;
+    z-index: 22;
+    background-color: pink;
+    left: 0px;
+    top: 80px;
+    position: absolute;
+    border-radius: 8px;
+    border: 1px solid #e6ebed;
+    display: none;
+}
+.all_main_head_data_box:hover+.Calendar_box{
+    display:block;
+}
+
+
+
+/* 登录页面 */
+.login_box{
+   width: 100%;
+   height: 100vh;
+    position: relative;
+}
+.Mask_box{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.login_main{
+    width: 800px;
+    height: 540px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: -300px;
+    display: flex;
+}
+
+.login_left{
+    width: 350px;
+    height: 540px;
+}
+.login_left img{
+  width: 100%;
+  height: 100%;
+}
+.login_right{
+    flex: 1;
+    position: relative;
+}
+.login_head{
+    height: 90px;
+    display: flex;
+}
+.login_head h3{
+    padding: 0 0 0 40px;
+    line-height: 90px;
+}
+.login_head p{
+    font-size: 11px;
+    color: #666;
+    line-height: 95px;
+    padding-left: 20px;
+}
+
+.userinfo_box{
+    width: 300px;
+    height: 60px;
+    /* background-color: pink; */
+    position: absolute;
+    left: 50%;
+     top: 20%;
+    margin-left: -150px;
+    display: flex;
+    justify-content:space-between;
+}   
+.userinfo_box p{
+    font-size: 14px;
+    line-height: 35px;
+}
+.userinfo_box1{
+    width: 300px;
+    height: 60px;
+    /* background-color: pink; */
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    top: 30%;
+    display: flex;
+    justify-content:space-between;
+}   
+.userinfo_box1 p{
+    font-size: 14px;
+    line-height: 35px;
+}
+.qrcode_box p{
+    font-size: 14px;
+    line-height: 40px;
+}
+.qrcode_box{
+    width: 150px;
+    height: 180px;
+    /* background-color: pink; */
+    margin-top: 150px;
+    position: absolute;
+    z-index: 22;
+    left: 50%;
+    top: 15%;
+    margin-left: -80px;
+}
+.login_right button{
+    position: absolute;
+    z-index: 22;
+    left: 50%;
+    top: 80%;
+    margin-left: -60px;
+}
