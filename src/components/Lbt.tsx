@@ -3,12 +3,10 @@ import { Carousel } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import '../layout/lbt.css'; // Assuming you have a CSS file for styling
 const imageUrls = [
-  "https://img0.baidu.com/it/u=1323575644,1970106555&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500",
-  "https://img2.baidu.com/it/u=2980521829,3346943998&fm=253&fmt=auto&app=120&f=JPEG?w=799&h=500",
-  "https://img0.baidu.com/it/u=2493485631,3753878583&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500",
-  "https://img2.baidu.com/it/u=3765817756,3156071734&fm=253&fmt=auto&app=138&f=JPEG?w=708&h=500",
-  "https://img2.baidu.com/it/u=492254775,3481016229&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800",
-  "https://img2.baidu.com/it/u=2194460080,3344696977&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500",
+ "../../public/login_img/banner1.webp",
+  "../../public/login_img/banner2.webp",
+  "../../public/login_img/banner3.webp",
+  "../../public/login_img/banner4.webp",
 ];
 function Lbt(){
 
@@ -41,7 +39,7 @@ function Lbt(){
 
     const contentStyle: React.CSSProperties = {
         width: '100%', // Adjust width as needed
-        height: '300px', // Adjust height as needed
+        height: '200px', // Adjust height as needed
         objectFit: 'cover', // This will make sure the image covers the whole space
         borderRadius: '10px'
     };
