@@ -5,6 +5,8 @@ import lunarFestivals from '../data/data'
 import Calendar from './Calendar';
 import Footer from './Footer';
 import Master from './Master';
+ import Lbtt from './Lbt'//轮播图
+ import Scroll from './Scroll';//滚动
 function AllMainRightCon() {
   const { Search } = Input;
   const options = [
@@ -97,6 +99,7 @@ function AllMainRightCon() {
             </div>
           </div>
         </div>
+       
         <div className="Calendar_box">
           <div>
             <button onClick={() => handleMonthChange(-1)}>上个月</button>
@@ -105,6 +108,10 @@ function AllMainRightCon() {
           </div>
           <Calendar year={selectedDate.getFullYear()} month={selectedDate.getMonth() + 1} />
         </div>
+      </div>
+        <div className="all_main_swiper">
+       <Lbtt></Lbtt>
+        <Scroll></Scroll>
       </div>
       <div className="all_master_box">
         <h3>设计大咖<span>加入我们 | 月入百万不是梦!</span><a href="#">加入我们 &lt;</a></h3>

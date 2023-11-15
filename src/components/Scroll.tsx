@@ -5,7 +5,7 @@ import { Carousel } from 'antd';
 import "../layout/scroll.css"
 
 const contentStyle: React.CSSProperties = {
-    width: "200px",
+    width: "300px",
     height: "100px",
     borderRadius: "5px",
 };
@@ -41,18 +41,18 @@ const Scroll: React.FC = () => {
         <div style={{ position: 'relative' }}>
             <Carousel afterChange={onChange} ref={carouselRef} dots={false}>
                 <div className='Picture_List'>
-                    <img style={contentStyle} src="https://img1.baidu.com/it/u=904940490,1135723751&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500" alt="" />
-                    <img style={contentStyle} src="https://img2.baidu.com/it/u=4243029348,3228741682&fm=253&fmt=auto&app=138&f=JPEG?w=846&h=500" alt="" />
-                    <img style={contentStyle} src="https://img1.baidu.com/it/u=2964242130,287279545&fm=253&fmt=auto&app=138&f=JPEG?w=770&h=500" alt="" />
-                    <img style={contentStyle} src="https://img2.baidu.com/it/u=3549876221,2453641501&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=280" alt="" />
-                    <img style={contentStyle} src="https://img1.baidu.com/it/u=3549530601,1375154555&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/1.webp" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/2.webp" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/3.webp" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/4.webp" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/5.webp" alt="" />
                 </div>
                 <div className='Picture_List'>
-                    <img style={contentStyle} src="https://img2.baidu.com/it/u=2067147301,4211966213&fm=253&fmt=auto&app=138&f=JPEG?w=747&h=500" alt="" />
-                    <img style={contentStyle} src="https://img2.baidu.com/it/u=4243029348,3228741682&fm=253&fmt=auto&app=138&f=JPEG?w=846&h=500" alt="" />
-                    <img style={contentStyle} src="https://img1.baidu.com/it/u=2964242130,287279545&fm=253&fmt=auto&app=138&f=JPEG?w=770&h=500" alt="" />
-                    <img style={contentStyle} src="https://img2.baidu.com/it/u=3549876221,2453641501&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=280" alt="" />
-                    <img style={contentStyle} src="https://img1.baidu.com/it/u=3549530601,1375154555&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281" alt="" />
+                  <img style={contentStyle} src="../../public/lbt/1.webp" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/2.webp" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/3.webp" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/4.webp" alt="" />
+                    <img style={contentStyle} src="../../public/lbt/5.webp" alt="" />
                 </div>
             </Carousel>
             {!hideLeftArrow && (
