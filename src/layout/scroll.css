@@ -1,5 +1,5 @@
 .Picture_List{
-    width: 100%;
+    width: 1000px;
     height: 150px;
     display: flex !important;
     flex-direction: row;

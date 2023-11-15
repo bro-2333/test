@@ -102,9 +102,9 @@ function AllMainRightCon() {
        
         <div className="Calendar_box">
           <div>
-            <button onClick={() => handleMonthChange(-1)}>上个月</button>
+            <button style={{border:'none'}} onClick={() => handleMonthChange(-1)}>&lt;</button>
             <span style={{ fontSize: '20px' }}>{`${selectedDate.getFullYear()}年${selectedDate.getMonth() + 1}月`}</span>
-            <button onClick={() => handleMonthChange(1)}>下个月</button>
+            <button style={{border:'none'}} onClick={() => handleMonthChange(1)}>&gt;</button>
           </div>
           <Calendar year={selectedDate.getFullYear()} month={selectedDate.getMonth() + 1} />
         </div>
