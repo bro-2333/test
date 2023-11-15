@@ -14,6 +14,10 @@
     height: 100%;
     border-right: 1px solid #ccc;
 }
+.leftBox img{
+    width: 165px;
+    height: 30px;
+}
 .mainBox{
     width: 60%;
     height: 100%;
@@ -29,6 +33,9 @@
     margin-left: 5%;
     margin-top: 5%;
 }
+.box span{
+    font-size: 12px;
+}
 .footerBox{
     width: 100%;
     height: 70%;
@@ -38,15 +45,21 @@
     flex-wrap: wrap;
 }
 .strong{
-    font-size: 18px;
+    font-size: 13px;
     font-weight: bold;
 }
 .ulList{
-    margin: 20px;
-    margin-left: 27px;
+    /* /* margin: 20px; */
+    margin-left: 18px; 
+    margin-top: 30px;
+
 }
 .ulList li{
-    line-height: 45px;
+    width: 60px;
+    /* line-height: 45px; */
+    font-size: 12px;
+    text-align: center;
+    margin: 0 0 16px;
 }
 .QRCode{
     margin: 50px auto;

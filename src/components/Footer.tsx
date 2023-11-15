@@ -26,12 +26,12 @@ function Footer() {
       <div className='headTop'>
         <div className='leftBox'>
           <img src="../../public/zwb/new_logo.svg" alt="" style={{width:'80%', height:'20%',marginLeft:'5%'}}/>
-          <span style={{display:'block',marginLeft:'5%',marginTop:'-5%',fontSize:'16px'}}>全球1000强，中国100强网站</span>
+          <span style={{display:'block',marginLeft:'5%',marginTop:'-5%',fontSize:'14px'}}>全球1000强，中国100强网站</span>
           <div className='footerBox'>
                 {
                   list.map((item:any)=>{
                     return <div className='box'>
-                      <h2>{item.num}</h2>
+                      <h3>{item.num}</h3>
                       <span>{item.con}</span>
                     </div>
                   })
@@ -54,26 +54,26 @@ function Footer() {
           }
         </div>
         <div className='rightBox'>
-          <MobileOutlined style={{fontSize:'25px',marginLeft:'10px',marginTop:'10px'}}/><span style={{fontSize:'20px'}}>手机APP</span>
-          <p style={{marginLeft:'10px',lineHeight:'25px',marginTop:'10px'}}>扫码注册 3分钟做出好设计</p>
+          <MobileOutlined style={{fontSize:'25px',marginLeft:'10px',marginTop:'10px'}}/><span style={{fontSize:'14px'}}>手机APP</span>
+          <p style={{marginLeft:'10px',lineHeight:'25px',marginTop:'10px',fontSize:'12px'}}>扫码注册 3分钟做出好设计</p>
           <div className='QRCode'>
             <QRCode
               value={'https://th.bing.com/th?id=OIP.HgVQp3fdEWi7TGCsEc-XlQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'} //value参数为生成二维码的链接
-              size={200} //二维码的宽高尺寸
+              size={150} //二维码的宽高尺寸
               fgColor="#000000"//二维码的颜色
             />
           </div>
         </div>
       </div>
       <div className='mainFooter'>
-          <h3 style={{color:'blue',marginTop:'10px',marginLeft:'10px'}}>友情链接</h3>
-          <span style={{marginLeft:'10px',marginTop:'2%',display:'block'}}>热门模板</span>
+          <h3 style={{color:'blue',marginTop:'10px',marginLeft:'10px',fontSize:'14px'}}>友情链接</h3>
+          <span style={{marginLeft:'10px',marginTop:'2%',display:'block',fontSize:'12px'}}>热门模板</span>
       </div>
       <div className='footer2'>
-          <span style={{display:'block',lineHeight:'30px',marginTop:'10px'}}>© 2023 eqxiu.com. All rights reserved 北京中网易企秀科技有限公司</span>
-          <span style={{lineHeight:'30px',marginTop:'10px'}}>电信与信息服务业务经营许可证：京ICP证160037号 | 京ICP备15056244号 | 京公网安备11010802018300</span>
-          <img src="../../public/zwb/brand_bottom_large.webp" style={{width:'100px',height:'38px',float:'right',marginRight:'10px'}} alt="" />
-          <img src="../../public/zwb/kexin.svg" style={{width:'100px',height:'45px',float:'right',marginRight:'10px'}} alt="" />
+          <span style={{display:'block',lineHeight:'30px',marginTop:'10px',fontSize:'12px'}}>© 2023 eqxiu.com. All rights reserved 北京中网易企秀科技有限公司</span>
+          <span style={{lineHeight:'30px',marginTop:'10px',fontSize:'12px'}}>电信与信息服务业务经营许可证：京ICP证160037号 | 京ICP备15056244号 | 京公网安备11010802018300</span>
+          <img src="../../public/zwb/brand_bottom_large.webp" style={{width:'64px',height:'24px',float:'right',marginRight:'10px'}} alt="" />
+          <img src="../../public/zwb/kexin.svg" style={{width:'64px',height:'24px',float:'right',marginRight:'10px'}} alt="" />
       </div>
     </div>
   )

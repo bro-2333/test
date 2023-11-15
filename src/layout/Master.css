@@ -1,7 +1,8 @@
 .Mac{
-    width: 1200px;
-    height: 200px;
+    width: 1000px;
+    height: 135px;
     overflow: hidden;
+    position: relative;
 }
 .MasterBox{
     display: flex;
@@ -9,7 +10,7 @@
     transition: transform 1s ease; /* 添加过渡效果，0.3秒的过渡时间，使用ease函数 */
 }
 .boxList{
-    width: 21%;
+    width: 240px;
     height: 100%;
     text-align: center;
     flex: 0 0 auto; /* flex属性的简写形式，第一个值是flex-grow，第二个值是flex-shrink，第三个值是flex-basis */
@@ -42,4 +43,8 @@
 }
 .rightHid{
     display: none;
+}
+.boxList img{
+    width: 236px;
+    height: 132px;
 }

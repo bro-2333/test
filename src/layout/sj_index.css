@@ -192,12 +192,15 @@
 .All_Main_Right_box{
    width: 100%;
    height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 .all_main_head_box{
     width: 100%;
-    height: 60px;
+    height: 100px;
     display: flex;
-       position: relative;
+    position: relative;
 }
 .all_main_head_img{
     width: 260px;
@@ -277,6 +280,48 @@
 .all_main_head_data_box:hover+.Calendar_box{
     display:block;
 }
+
+
+
+/* 页脚 */
+.all_footer_box{
+    width: 100%;
+    height: 560px;
+}
+.all_master_box{
+    width: 100%;
+    height: 185px;
+    /* background-color: red; */
+    position: relative;
+}
+.all_master_box h3{
+    font-size: 20px;
+    padding-left: 10px;
+}
+.all_master_box span{
+    font-size: 12px;
+    font-weight: normal;
+    padding-left:20px ;
+}
+.all_master_box h3 a{
+    float: right;
+     font-size: 12px;
+    padding-right: 20px;
+    font-weight: normal;
+    color: #666;
+    text-decoration: none;
+    line-height: 33px;
+}
+.Master_box{
+    clear: both;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 1;
+}
+
+
+
 
 
 

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Input, Select, Space } from 'antd';
 import Calendar from './Calendar';
+import Footer from './Footer';
+import Master from './Master';
 function AllMainRightCon() {
   const { Search } = Input;
   const options = [
@@ -26,65 +28,74 @@ function AllMainRightCon() {
     setSelectedDate(newDate);
 
   }
-// const allMainBox = document.querySelector('.all_main_head_data_box')
-// allMainBox.onMouse
+  // const allMainBox = document.querySelector('.all_main_head_data_box')
+  // allMainBox.onMouse
 
   return (
-    <div>
-      <div className='All_Main_Right_box'>
-        <div className="all_main_head_box">
-          <div className="all_main_head_img">
-            <img src="../../public/login_img/0yuan.webp" alt="" />
-          </div>
-          <div className="all_main_head_search_box">
-            <div className="all_main_head_search">
-              <Space.Compact>
-                <Select defaultValue="全部" options={options} />
-                <Search allowClear defaultValue={defaultValue} onSearch={onSearch} enterButton />
-              </Space.Compact>
-            </div>
-            <div className="all_main_head_nav">
-              <ul>
-                <li>邀请函</li>
-                <li>互动小游戏</li>
-                <li>H5</li>
-                <li>婚礼邀请函</li>
-                <li>抽奖</li>
-                <li>游戏</li>
-              </ul>
-            </div>
-          </div>
-          <div className="all_main_head_data_box">
-            <div className="all_main_head_data_con">
-              <div className="all_main_head_data_left">
-                <div className="updata">
-                  <span>11/</span>
-                  <span style={{ fontSize: "12px" }}>14</span>
-                  <span style={{ paddingLeft: "10px" }}>2023</span>
-                </div>
-                <div className="downData">
-                  <span style={{ fontSize: "12px", color: "#666" }}>周二</span>
-                  <span style={{ fontSize: "12px", paddingLeft: "10px", color: "#666" }}>农历十月初二</span>
-                </div>
-              </div>
-              <div className="all_main_head_data_right">
-                <img src="../../public/login_img/allhead1.png" alt="" />
-                <p>电影情人节</p>
 
-              </div>
-            </div>
+    <div className='All_Main_Right_box'>
+      <div className="all_main_head_box">
+        <div className="all_main_head_img">
+          <img src="../../public/login_img/0yuan.webp" alt="" />
+        </div>
+        <div className="all_main_head_search_box">
+          <div className="all_main_head_search">
+            <Space.Compact>
+              <Select defaultValue="全部" options={options} />
+              <Search allowClear defaultValue={defaultValue} onSearch={onSearch} enterButton />
+            </Space.Compact>
           </div>
-          <div className="Calendar_box">
-            <div>
-              <button onClick={() => handleMonthChange(-1)}>上个月</button>
-              <span style={{ fontSize: '20px' }}>{`${selectedDate.getFullYear()}年${selectedDate.getMonth() + 1}月`}</span>
-              <button onClick={() => handleMonthChange(1)}>下个月</button>
-            </div>
-            <Calendar year={selectedDate.getFullYear()} month={selectedDate.getMonth() + 1} />
+          <div className="all_main_head_nav">
+            <ul>
+              <li>邀请函</li>
+              <li>互动小游戏</li>
+              <li>H5</li>
+              <li>婚礼邀请函</li>
+              <li>抽奖</li>
+              <li>游戏</li>
+            </ul>
           </div>
         </div>
+        <div className="all_main_head_data_box">
+          <div className="all_main_head_data_con">
+            <div className="all_main_head_data_left">
+              <div className="updata">
+                <span>11/</span>
+                <span style={{ fontSize: "12px" }}>14</span>
+                <span style={{ paddingLeft: "10px" }}>2023</span>
+              </div>
+              <div className="downData">
+                <span style={{ fontSize: "12px", color: "#666" }}>周二</span>
+                <span style={{ fontSize: "12px", paddingLeft: "10px", color: "#666" }}>农历十月初二</span>
+              </div>
+            </div>
+            <div className="all_main_head_data_right">
+              <img src="../../public/login_img/allhead1.png" alt="" />
+              <p>电影情人节</p>
+
+            </div>
+          </div>
+        </div>
+        <div className="Calendar_box">
+          <div>
+            <button onClick={() => handleMonthChange(-1)}>上个月</button>
+            <span style={{ fontSize: '20px' }}>{`${selectedDate.getFullYear()}年${selectedDate.getMonth() + 1}月`}</span>
+            <button onClick={() => handleMonthChange(1)}>下个月</button>
+          </div>
+          <Calendar year={selectedDate.getFullYear()} month={selectedDate.getMonth() + 1} />
+        </div>
+      </div>
+      <div className="all_master_box">
+        <h3>设计大咖<span>加入我们 | 月入百万不是梦!</span><a href="#">加入我们 &lt;</a></h3>
+        <div className="Master_box">
+          <Master />
+        </div>
+      </div>
+      <div className="all_footer_box">
+        {/* <Footer /> */}
       </div>
     </div>
+
 
   )
 

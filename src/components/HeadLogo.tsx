@@ -1,4 +1,5 @@
 
+import React from 'react'
 import Login from '../components/Login'
 import '../layout/sj_index.css'
 function HeadLogo() {

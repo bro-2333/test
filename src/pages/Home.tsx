@@ -1,8 +1,8 @@
 import React, { } from 'react'
 
 import HeadLogo from '../components/HeadLogo'
-// import AllMainRightCon from '../components/AllMainRightCon';
 import AllMainRightCon from '../components/AllMainRightCon'
+
 import {
     HomeOutlined,
     FundProjectionScreenOutlined,
@@ -48,6 +48,7 @@ const Home = () => {
                     <AllMainRightCon />
                 </div>
             </div>
+           
         </div>
     )
 }

@@ -21,6 +21,7 @@ function Master() {
   const handleChange = (type:string) => {
     const container = containerRef.current
     let newWidth =containerRef.current?.children[0].clientWidth*8 -container?.clientWidth
+    console.log('111',11);
     
     if(container){
       setWays(type)
@@ -38,7 +39,7 @@ function Master() {
         {
           items.map(item =>{
             return <div className='boxList'>
-              <img src={item} alt="" style={{width:'90%',height:'90%'}}/>
+              <img src={item} alt="" />
             </div>
           })
         }
