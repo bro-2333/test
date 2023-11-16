@@ -24,10 +24,10 @@ function AllMainRightCon() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [flag,setflag] = useState(false)
   const onSearch: any = (value: any) => console.log(value);
-  const lunarDate = LunarCalendar.solarToLunar(selectedDate.getFullYear(), selectedDate.getMonth() + 1, selectedDate.getDate());
+  const lunarDate = LunarCalendar.solarToLunar(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate());
   const lunarMomthTime = lunarDate.lunarMonthName
   const lunarDateTime = lunarDate.lunarDayName
-  const key = `${selectedDate.getMonth() + 1}-${selectedDate.getDate()+1}`;
+  const key = `${new Date().getMonth() + 1}-${new Date().getDate()+1}`;
   const fistival =lunarFestivals[key].fast[0]
   let setTimeMouse:any
   
@@ -93,12 +93,12 @@ function AllMainRightCon() {
           <div className="all_main_head_data_con">
             <div className="all_main_head_data_left">
               <div className="updata">
-                <span>{selectedDate.getMonth() + 1}/</span>
-                <span style={{ fontSize: "12px" }}>{selectedDate.getDate()}</span>
-                <span style={{ paddingLeft: "10px" }}>{selectedDate.getFullYear()}</span>
+                <span>{new Date().getMonth() + 1}/</span>
+                <span style={{ fontSize: "12px" }}>{new Date().getDate()}</span>
+                <span style={{ paddingLeft: "10px" }}>{new Date().getFullYear()}</span>
               </div>
               <div className="downData">
-                <span style={{ fontSize: "12px", color: "#666" }}>{`周${calenDay(selectedDate.getDay())}`}</span>
+                <span style={{ fontSize: "12px", color: "#666" }}>{`周${calenDay(new Date().getDay())}`}</span>
                 <span style={{ fontSize: "12px", paddingLeft: "10px", color: "#666" }}>{`农历${lunarMomthTime}${lunarDateTime}`}</span>
               </div>
             </div>
@@ -111,9 +111,9 @@ function AllMainRightCon() {
        
         <div className={flag?'Calendar_box':'Calendar_box_hidden'} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
           <div>
-            <button style={{border:'none'}} onClick={() => handleMonthChange(-1)}>&lt;</button>
+            <button style={{border:'none',margin:'5px'}} onClick={() => handleMonthChange(-1)}>&lt;</button>
             <span style={{ fontSize: '20px' }}>{`${selectedDate.getFullYear()}年${selectedDate.getMonth() + 1}月`}</span>
-            <button style={{border:'none'}} onClick={() => handleMonthChange(1)}>&gt;</button>
+            <button style={{border:'none',margin:'5px'}} onClick={() => handleMonthChange(1)}>&gt;</button>
           </div>
           <Calendar year={selectedDate.getFullYear()} month={selectedDate.getMonth() + 1} />
         </div>
