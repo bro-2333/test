@@ -276,6 +276,8 @@
     position: absolute;
     border-radius: 8px;
     border: 2px solid #eee;
+}
+.Calendar_box_hidden{
     display: none;
 }
 .all_main_head_data_box:hover+.Calendar_box{
