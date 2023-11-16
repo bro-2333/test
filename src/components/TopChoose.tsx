@@ -40,25 +40,28 @@ const TopChoose = () => {
   }
 
   return (
-    <div className="box">
-        <div className="top">
+    <div className="topchoose_box">
+        <div className="topchoose_top">
+          <p>全部模板 
             {
                 conarr && Object.entries(conarr).map((item,index)=>{
-                    return <span>{item[1]} <span style={{paddingLeft:"20px"}} onClick={()=>delobj(item[0])}>X</span></span>
+                    return <span key={index}> <span style={{fontSize:'13px',color:'#666'}}>&gt;</span> <span className='topchoose_top_con'>{item[1]}  <b style={{padding:"5px"}} onClick={()=>delobj(item[0])}>X</b></span></span>
                 })
             }
+            &emsp;约 <a href="#">10000+</a> 个搜索结果
+            </p>
 		</div>
-      <div className="conbox">
+      <div className="topchoose_conbox">
         {
             data && data.map((item: any,index)=>{
 
 				if(!conarr[item.title])
 				{
-					return  <div className="type">
-                        <div className="typetitle">{item.title}</div>
+					return  <div className="topchoose_type" key={index}>
+                        <div className="topchoose_typetitle">{item.title}</div>
                         {
                           item.conter && item.conter.map((obj: any)=>{
-                            return <div onClick={()=>addconarr(item.title,obj)}>{obj}</div>
+                            return <div className='topchoose_typetitle_con'  onClick={()=>addconarr(item.title,obj)}>{obj}</div>
                           })
                         }
                       </div>

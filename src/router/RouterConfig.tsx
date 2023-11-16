@@ -8,7 +8,7 @@ export const homeRoutes: Type.RouterList = [];
 const routes: Type.RouterList = [
   {
     path: "/",
-    to: "/login",
+    to: "/home",
   },
   {
     path: "/home",
@@ -16,8 +16,8 @@ const routes: Type.RouterList = [
     children: homeRoutes,
   },
   {
-    path: "/login",
-    element: lazy(() => import("../pages/Login")),
+    path: "/details",
+    element: lazy(() => import("../pages/Details")),
   },
   {
     path: "*",
