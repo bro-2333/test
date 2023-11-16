@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Input, Select, Space } from 'antd';
 import LunarCalendar from 'lunar-calendar';
 import lunarFestivals from '../data/data'
@@ -22,18 +22,19 @@ function AllMainRightCon() {
   let str = ['邀请函', '互动游戏', 'H5', '婚礼邀请函']
   let [count, setcount]: any = useState(0);
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [flag,setflag] = useState(false)
   const onSearch: any = (value: any) => console.log(value);
   const lunarDate = LunarCalendar.solarToLunar(selectedDate.getFullYear(), selectedDate.getMonth() + 1, selectedDate.getDate());
   const lunarMomthTime = lunarDate.lunarMonthName
   const lunarDateTime = lunarDate.lunarDayName
   const key = `${selectedDate.getMonth() + 1}-${selectedDate.getDate()+1}`;
   const fistival =lunarFestivals[key].fast[0]
-  console.log(fistival);
-  
+  let setTimeMouse:any
   
   let [defaultValue, setdefaultValue] = useState('邀请函')
+  
 
-  const calenDay = (day:number) => {
+  const calenDay = useCallback((day:number) => {
     switch(day) {
       case 0: return '日';
       case 1: return '一';
@@ -43,16 +44,25 @@ function AllMainRightCon() {
       case 5: return '五';
       case 6: return '六';
     }
-  }
+  },[selectedDate.getDay()])
   // 日历
   const handleMonthChange = (change: any) => {
     const newDate = new Date(selectedDate);
     newDate.setMonth(selectedDate.getMonth() + change);
     setSelectedDate(newDate);
-
   }
   // const allMainBox = document.querySelector('.all_main_head_data_box')
   // allMainBox.onMouse
+
+  const mouseEnter = () => {
+    clearTimeout(setTimeMouse)
+    setflag(true);
+  }
+  const mouseLeave = () => {
+    setTimeMouse=setTimeout(() => {
+      setflag(false);
+    }, 400);
+  }
 
   return (
 
@@ -79,7 +89,7 @@ function AllMainRightCon() {
             </ul>
           </div>
         </div>
-        <div className="all_main_head_data_box">
+        <div className="all_main_head_data_box" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
           <div className="all_main_head_data_con">
             <div className="all_main_head_data_left">
               <div className="updata">
@@ -95,12 +105,11 @@ function AllMainRightCon() {
             <div className="all_main_head_data_right">
               <img src="../../public/login_img/allhead1.png" alt="" />
               <p>{fistival}</p>
-
             </div>
           </div>
         </div>
        
-        <div className="Calendar_box">
+        <div className={flag?'Calendar_box':'Calendar_box_hidden'} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
           <div>
             <button style={{border:'none'}} onClick={() => handleMonthChange(-1)}>&lt;</button>
             <span style={{ fontSize: '20px' }}>{`${selectedDate.getFullYear()}年${selectedDate.getMonth() + 1}月`}</span>
