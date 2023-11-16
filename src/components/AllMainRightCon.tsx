@@ -11,12 +11,36 @@ function AllMainRightCon() {
   const { Search } = Input;
   const options = [
     {
-      value: '北京',
-      label: '北京',
+      value: '全部',
+      label: '全部',
     },
     {
-      value: '江苏',
-      label: '江苏',
+      value: 'H5',
+      label: 'H5',
+    },
+      {
+      value: '表单',
+      label: '表单',
+    },
+    {
+      value: '长图',
+      label: '长图',
+    },
+      {
+      value: '互动',
+      label: '互动',
+    },
+    {
+      value: '电子画册',
+      label: '电子画册',
+    },
+    {
+      value: '视频',
+      label: '视频',
+    },
+    {
+      value: '解决方案',
+      label: '解决方案',
     },
   ];
   let str = ['邀请函', '互动游戏', 'H5', '婚礼邀请函']
