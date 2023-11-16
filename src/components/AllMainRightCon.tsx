@@ -61,7 +61,7 @@ function AllMainRightCon() {
   const mouseLeave = () => {
     setTimeMouse=setTimeout(() => {
       setflag(false);
-    }, 300);
+    }, 400);
   }
 
   return (
