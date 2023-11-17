@@ -151,11 +151,18 @@
     width: 100%;
     margin-top: 80px;
     height: calc(100% - 80px);
-    display: flex;
+    /* display: flex; */
 }
 /* 左侧盒子 */
 .allmain_left{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 80px;
     width: 200px;
+    overflow: hidden;
+    z-index: 9;
+    background: #fff;
 }
 .allmain_left ul li{
     list-style: none;
@@ -178,6 +185,7 @@
     line-height: 40px;
 }
 .allmain_right{
+    margin-left: 200px;
     max-width: 1704px;
     min-width: 1080px;
     /* background-color: pink; */
@@ -193,6 +201,7 @@
 .All_Main_Right_box{
    width: 100%;
    height: 100%;
+   overflow: scroll;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -299,6 +308,7 @@
     position: relative;
 }
 .all_master_box h3{
+    width: 1280px;
     font-size: 20px;
     padding-left: 10px;
 }
@@ -439,13 +449,16 @@
 }
 /* 轮播图俩组件 */
 .all_main_swiper{
-    width: 1280px;
+    overflow: hidden;
+    width: 100%;
     height: 350px;
-    float: left;
- 
+    /* float: left; */
+    
 }
 
-
+.all_main_swiper>.swiper{
+    width: 1280px;
+}
 
 
 
@@ -626,7 +639,19 @@
 
 
 
-
-
+/* 主页广告展位图 */
+.all_main_ads_box{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    /* background-color: pink; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.all_main_ads_box img{
+    border-radius: 10px;
+    width: 1280px;
+    height: 100%;
+}
 
 
