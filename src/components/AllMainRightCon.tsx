@@ -43,8 +43,8 @@ function AllMainRightCon() {
       label: '解决方案',
     },
   ];
-  let str = ['邀请函', '互动游戏', 'H5', '婚礼邀请函']
-  let [count, setcount]: any = useState(0);
+  // let str = ['邀请函', '互动游戏', 'H5', '婚礼邀请函']
+  // let [count, setcount]: any = useState(0);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [flag, setflag] = useState(false)
   const onSearch: any = (value: any) => console.log(value);

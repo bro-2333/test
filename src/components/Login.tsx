@@ -17,6 +17,14 @@ function Login() {
     const close =()=>{
          setshowElem(false)
     }
+
+    // 判断登录,返回用户信息
+
+  const getUsername =(value:any)=>{
+     console.log('e',value)
+  }
+
+
     return (
         <div className="login_box">
             <Button type="primary" size='middle' onClick={() => goLogin("登录")}>
@@ -34,7 +42,7 @@ function Login() {
                             <p>{showCon === "登录" ? '还没有账号,去注册' : '已有账号,去登录'}</p>
                         </div>
                         <div className="userinfo_box">
-                            <p>用户名:</p><Input size="large" placeholder="青输入用户名" prefix={<UserOutlined />} />
+                            <p>用户名:</p><Input size="large" onChange={} placeholder="请输入用户名" prefix={<UserOutlined />} />
                         </div>
                         <div className="userinfo_box1">
                             <p>密码:</p><Input.Password placeholder="请输入密码" />
