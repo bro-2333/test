@@ -28,7 +28,7 @@ function HeadLogo() {
         <div className='HeadLogo_box'>
             <div className="headlogo_main">
                 <div className="img_box">
-                    <img src="../../public/login_img/new_logo.svg" alt="" />
+                    <img src="../../public/login_img/logo.jpg" alt="" />
                     <div className="logo_hover_box">
                         <img src="../../public/login_img/favorite-guide.webp" alt="" />
                     </div>
