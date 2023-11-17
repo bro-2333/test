@@ -51,8 +51,8 @@ function AllMainRightCon() {
   const lunarDate = LunarCalendar.solarToLunar(new Date().getFullYear(), new Date().getMonth() + 1, new Date().getDate());
   const lunarMomthTime = lunarDate.lunarMonthName
   const lunarDateTime = lunarDate.lunarDayName
-  const key = `${new Date().getMonth() + 1}-${new Date().getDate()+1}`;
-  const fistival =lunarFestivals[key].fast[0]
+  const key = `${new Date().getMonth() + 1}-${new Date().getDate()}`;
+  const fistival =lunarFestivals[key]?lunarFestivals[key].fast[0]:'每天好心情'
   let setTimeMouse:any
   
   let [defaultValue, setdefaultValue] = useState('邀请函')
