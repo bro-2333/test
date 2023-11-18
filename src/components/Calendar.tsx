@@ -70,10 +70,10 @@ const generateCalendarData = (year:any, month:any) => {
 
   // 添加当前月的日期
   for (let i = 1; i <= totalDays; i++) {
-    console.log(year,month);
+    // console.log(year,month);
     
     const lunarDate = LunarCalendar.solarToLunar(year, month, i);
-    console.log(lunarDate);
+    // console.log(lunarDate);
     
     calendarData.push({
       day: i,
