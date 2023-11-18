@@ -96,13 +96,13 @@ const [currentImage, setCurrentImage] = useState(0);
   return (
     <div>
         {
-              <div
+              <div style={{borderRadius:'10px'}}
                 className={`scrolling-box ${isHovered ? 'hovered' : ''}`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={handleMouseLeave}  
                 ref={boxRef}
                 >
-                <img
+                <img style={{borderRadius:'10px'}}
                     src="https://img.zcool.cn/community/0167db5d5cf6dba8012187f4ff06ea.jpg@1280w_1l_2o_100sh.jpg" // 替换为你的图片 URL
                     alt="Scrolling Image"
                 />

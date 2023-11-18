@@ -1,6 +1,6 @@
 .midcard_Mac{
     /* width: 1200px; */
-    width: 1050px;
+    width: 1085px;
     /* background-color: red; */
     height: 400px;
     overflow: hidden;
@@ -12,7 +12,7 @@
     transition: transform 1s ease; /* 添加过渡效果，0.3秒的过渡时间，使用ease函数 */
 }
 .midcard_boxList{
-    width: 240px;
+    /* width: 240px; */
     height: 100%;
     text-align: center;
     flex: 0 0 auto; /* flex属性的简写形式，第一个值是flex-grow，第二个值是flex-shrink，第三个值是flex-basis */

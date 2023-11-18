@@ -10,9 +10,9 @@
 
 }
 .onecard_box{
-    margin: 20px;
+    margin: 20px 10px 5px 5px;
     width: 200px;
-    height: 350px ;
+    height: 300px ;
     /* border: 1px solid #000; */
     overflow: hidden;
     position: relative;

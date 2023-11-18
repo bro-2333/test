@@ -38,18 +38,20 @@
     text-align: center;
     line-height: 30px;
     background-color: #f1f1f1;
-    font-size: 15px;
+    font-size: 13px;
     border-radius: 20px;
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .con_tabonly:hover{
     color: blue;
+    font-weight: 900;
 }
 .con_lookmore{
-    margin-left: 20%;
+    margin-left: 45%;
     line-height: 50px;
-    color: #ccc;
+    font-size: 13px;
+    color: #666;
 }
 .con_lookmore:hover{
     color: blue;
