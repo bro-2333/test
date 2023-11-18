@@ -664,8 +664,27 @@
 }
 
 
+/* ----------------------h5盒子 */
+.all_main_h5_box1{
+    width: 100%;
+    height: 400px;
+   
+}
+.all_main_h5_con1{
+    width: 1280px;
+    height: 100%;
+     background-color: pink;
+}
 
-
+/* 内容撑开高 */
+.all_main_h5_box2{
+    width: 100%;
+  background-color: pink;
+}
+.all_main_h5_con1{
+    width: 1280px;
+    height: 100%;
+}
 /* 登录后样式 */
 
 /* afterloginmain */

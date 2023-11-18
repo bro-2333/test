@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { EditOutlined, HeartOutlined, UserOutlined } from '@ant-design/icons';
 
 
@@ -8,11 +8,16 @@ function AfterLogin() {
 let afterloginfreeData=[
   '模板免费用','版权商用','无水印下载','无广告'
 ]
+
+const outLogin =()=>{
+  localStorage.removeItem('token')
+  localStorage.removeItem('userInfo')
+}
   return (
     <div className='AfterLogin_box'>
       <div className="afterlogin_head_box">
         <h4>JSno</h4>
-        <span>退出</span>
+        <span onClick={outLogin}>退出</span>
       </div>
       <p style={{ fontSize: '10px' }}>升级会员享受更多权益 &gt;</p>
       <div className="afterlogin_middle_box">
