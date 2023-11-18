@@ -2,7 +2,7 @@ import React from 'react'
 import { BellOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 import AfterLogin from './AfterLogin';
-import '../layout/sj_afterloginn.css'
+import '../../layout/sj_afterloginn.css'
 function AfterLoginn() {
     return (
         <div className='AfterLoginn_box'>
