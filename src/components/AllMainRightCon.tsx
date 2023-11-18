@@ -7,6 +7,9 @@ import Footer from './Footer';
 import Master from './Master';
 import Lbtt from './Lbt'//轮播图
 import Scroll from './Scroll';//滚动
+
+import MiddleCard from './MiddleCard';
+
 function AllMainRightCon() {
   const { Search } = Input;
   const options = [
@@ -45,6 +48,8 @@ function AllMainRightCon() {
   ];
   // let str = ['邀请函', '互动游戏', 'H5', '婚礼邀请函']
   // let [count, setcount]: any = useState(0);
+
+
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [flag, setflag] = useState(false)
   const onSearch: any = (value: any) => console.log(value);
@@ -55,7 +60,7 @@ function AllMainRightCon() {
   const fistival = lunarFestivals[key] ? lunarFestivals[key].fast[0] : '每天好心情'
   let setTimeMouse: any
 
-  let [defaultValue, setdefaultValue] = useState('邀请函')
+  const [defaultValue, setdefaultValue] = useState('邀请函')
 
 
   const calenDay = useCallback((day: number) => {
@@ -159,7 +164,7 @@ function AllMainRightCon() {
 
       {/* 所有h5展示盒子 */}
       <div className="all_main_h5_box">
-
+        {/* <MiddleCard></MiddleCard> */}
       </div>
 
 
