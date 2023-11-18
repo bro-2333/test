@@ -28,6 +28,7 @@ const OnlyCard = () => {
           </div>
          </div>
          <div className="onecard_shoucang">
+            
           {
             shoucangbol ?<Star fontSize="25px" color="orange" onClick={shouCangExent}  />:<StarO fontSize="25px" color="#fff" onClick={shouCangExent} />
           }

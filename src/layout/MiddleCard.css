@@ -47,7 +47,7 @@
     color: blue;
 }
 .con_lookmore{
-    margin-left: 50%;
+    margin-left: 20%;
     line-height: 50px;
     color: #ccc;
 }
@@ -106,4 +106,5 @@
     width: 1200px;
     height: 400px;
     padding-left: 20px;
+    margin-top: -20px;
 }

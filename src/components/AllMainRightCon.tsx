@@ -160,7 +160,7 @@ function AllMainRightCon() {
       {/* 所有h5展示盒子 */}
       <div className="all_main_h5_box1">
         <div className="all_main_h5_con1">
-
+          <MiddleCard></MiddleCard>
         </div>
       </div>
 
