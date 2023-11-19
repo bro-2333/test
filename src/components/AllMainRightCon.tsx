@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Master from './Master';
  import Lbtt from './Lbt'//轮播图
  import Scroll from './Scroll';//滚动
+
 function AllMainRightCon() {
   const { Search } = Input;
   const options = [

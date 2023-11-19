@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
+import React,{ useState } from 'react'
 import '../layout/sj_index.css'
 import { Button } from 'antd';
 import { Input } from 'antd';
 import QRCode from 'qrcode.react';
 import { UserOutlined } from '@ant-design/icons';
+import DingCode from '../components/DingCode'
 function Login() {
-
     let [showElem, setshowElem] = useState(false);
     let [showCon, setshowCon] = useState("");
     const goLogin = (e: any) => {
         setshowElem(true)
         setshowCon(e)
         console.log(showCon, '56789087654678976543');
-
     }
     const close =()=>{
          setshowElem(false)
     }
+    
     return (
         <div className="login_box">
             <Button type="primary" size='middle' onClick={() => goLogin("登录")}>
@@ -40,10 +40,10 @@ function Login() {
                             <p>密码:</p><Input.Password placeholder="请输入密码" />
                         </div>
                         <div className="qrcode_box">
-                            <p>用微信扫描二维码登录</p>
-                            <QRCode
+                            {/* <p>用微信扫描二维码登录</p> */}
+                            {/* <QRCode
                                 id="qrCode"
-                                value="https://www.jianshu.com/u/992656e8a8a6"
+                                value="https://oapi.dingtalk.com/connect/qrconnect?appid=dingfjhdfbbyscyhklmx&response_type=code&scope=snsapi_login&state=STATE&redirect_uri=http://10.31.72.54:5173/home"
                                 size={150} // 二维码的大小
                                 fgColor="#000000" // 二维码的颜色
                                 style={{ margin: 'auto' }}
@@ -53,9 +53,10 @@ function Login() {
                                     width: 100,
                                     excavate: true, // 中间图片所在的位置是否镂空
                                 }}
-                            />
+                            /> */}
+                            <DingCode />
                         </div>
-                        <Button size="large" type="primary"  onClick={close}>登 &emsp;&emsp; 录</Button>
+                        {/* <Button size="large" type="primary"  onClick={close}>登 &emsp;&emsp; 录</Button> */}
                     </div>
                 </div>
             </div>

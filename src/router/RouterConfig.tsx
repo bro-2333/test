@@ -20,6 +20,10 @@ const routes: Type.RouterList = [
     element: lazy(() => import("../pages/Details")),
   },
   {
+    path: "/login",
+    element: lazy(() => import("../pages/login")),
+  },
+  {
     path: "*",
     element: lazy(() => import("../pages/Error")),
   },
