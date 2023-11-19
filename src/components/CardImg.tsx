@@ -100,16 +100,25 @@ const [currentImage, setCurrentImage] = useState(0);
   return (
     <div>
         {
+<<<<<<< HEAD
           cardImglist.length==1 &&cardImglist.map((item :any,cardImgListIndex :any)=>{
             return <div
             key={cardImgListIndex}
+=======
+              <div style={{borderRadius:'10px'}}
+>>>>>>> 8acb47f72bc06a011d5cb7b438125cb64fd4dc1e
                 className={`scrolling-box ${isHovered ? 'hovered' : ''}`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={handleMouseLeave}  
                 ref={boxRef}
                 >
+<<<<<<< HEAD
                 <img
                     src={item} // 替换为你的图片 URL
+=======
+                <img style={{borderRadius:'10px'}}
+                    src="https://img.zcool.cn/community/0167db5d5cf6dba8012187f4ff06ea.jpg@1280w_1l_2o_100sh.jpg" // 替换为你的图片 URL
+>>>>>>> 8acb47f72bc06a011d5cb7b438125cb64fd4dc1e
                     alt="Scrolling Image"
                 />
                 </div>

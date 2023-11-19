@@ -4,12 +4,23 @@ import { Button } from 'antd';
 import AfterLogin from './AfterLogin';
 import '../../layout/sj_afterloginn.css'
 function AfterLoginn() {
-    let [userInfo,setuserInfo] =useState('')
-    useEffect(()=>{
-        let userInfo:any = localStorage.getItem('userinfo')
-        setuserInfo(userInfo)
-        console.log('user info',userInfo)
-    },[])
+    let [userInfo, setuserInfo]: any = useState({})
+    const [flag, setflag] = useState(false)
+    let setTimeMouse: any
+    useEffect(() => {
+        let userinfo: any = JSON.parse(localStorage.getItem('userinfo') || '')
+        setuserInfo(userinfo)
+        console.log('user info', userinfo)
+    }, [])
+    const mouseEnter = () => {
+        clearTimeout(setTimeMouse)
+        setflag(true);
+    }
+    const mouseLeave = () => {
+        setTimeMouse = setTimeout(() => {
+            setflag(false);
+        }, 400);
+    }
     return (
         <div className='AfterLoginn_box'>
             <div className="afterloginn_con">
@@ -17,10 +28,9 @@ function AfterLoginn() {
                 <span className='afterloginn_ticket'>券</span>
                 <BellOutlined style={{ fontSize: '14px' }} />
                 <div className="afterloginn_userinfo">
-                    {/* <img src={userInfo} alt="" /> */}
-<img src="https://tupian.qqw21.com/article/UploadPic/2020-7/202072722471645451.jpg" alt="" />
+                    <img src={userInfo.img} alt=""  onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} />
                     {/* 用户信息展示 */}
-                    <div className="afterloginn_box">
+                    <div className="afterloginn_box" style={{ display: flag ? 'block' : 'none' }} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
                         <AfterLogin />
                     </div>
                 </div>

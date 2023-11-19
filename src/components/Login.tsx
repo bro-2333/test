@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
+import React,{ useState } from 'react'
 import '../layout/sj_index.css'
 import { Button, message, Space } from 'antd';
 import { Input } from 'antd';
 import QRCode from 'qrcode.react';
 import { UserOutlined } from '@ant-design/icons';
+<<<<<<< HEAD
+import DingCode from '../components/DingCode'
+function Login() {
+=======
 import axiosInstance from '../api/axiosInstance';
 // import { message} from 'antd';
 // const [messageApi] = message.useMessage();
 function Login(prop: any) {
     let { onChangeLogintype } = prop
     const [messageApi, contextHolder] = message.useMessage();
+>>>>>>> 013bd0b718ce9e7a5eba38877e91affde4cd5314
     let [showElem, setshowElem] = useState(false);
     let [showCon, setshowCon] = useState("");
     let [userName, setuserName] = useState('')
@@ -27,12 +32,14 @@ function Login(prop: any) {
         setshowElem(true)
         setshowCon(e)
         console.log(showCon, '56789087654678976543');
-
     }
 
     const pswValue = (value: any) => {
         setpassword(value.target.value)
     }
+<<<<<<< HEAD
+    
+=======
     const userNameValue = (value: any) => {
         setuserName(value.target.value)
     }
@@ -75,6 +82,7 @@ function Login(prop: any) {
 
     }
 
+>>>>>>> 013bd0b718ce9e7a5eba38877e91affde4cd5314
     return (
         <div className="login_box">
             {contextHolder}
@@ -103,10 +111,10 @@ function Login(prop: any) {
                             </div>
                         </div>
                         <div className="qrcode_box">
-                            <p>用微信扫描二维码登录</p>
-                            <QRCode
+                            {/* <p>用微信扫描二维码登录</p> */}
+                            {/* <QRCode
                                 id="qrCode"
-                                value="https://www.jianshu.com/u/992656e8a8a6"
+                                value="https://oapi.dingtalk.com/connect/qrconnect?appid=dingfjhdfbbyscyhklmx&response_type=code&scope=snsapi_login&state=STATE&redirect_uri=http://10.31.72.54:5173/home"
                                 size={150} // 二维码的大小
                                 fgColor="#000000" // 二维码的颜色
                                 style={{ margin: 'auto' }}
@@ -116,9 +124,14 @@ function Login(prop: any) {
                                     width: 100,
                                     excavate: true, // 中间图片所在的位置是否镂空
                                 }}
-                            />
+                            /> */}
+                            <DingCode />
                         </div>
+<<<<<<< HEAD
+                        {/* <Button size="large" type="primary"  onClick={close}>登 &emsp;&emsp; 录</Button> */}
+=======
                         <Button size="large" type="primary" onClick={close}>登 &emsp;&emsp; 录</Button>
+>>>>>>> 013bd0b718ce9e7a5eba38877e91affde4cd5314
                     </div>
                 </div>
             </div>

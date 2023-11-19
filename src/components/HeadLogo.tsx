@@ -66,12 +66,12 @@ function HeadLogo() {
                     {
                         tokenvalue ? <AfterLoginn /> : <Login />
                     }
-                   {
-                       tokenvalue ? '' : <div className="coupons_box">
-                        <img src="../../public/login_img/Coupons.webp" alt="" />
-                    </div> 
-                   }
-                   
+                    {
+                        tokenvalue ? '' : <div className="coupons_box">
+                            <img src="../../public/login_img/Coupons.webp" alt="" />
+                        </div>
+                    }
+
                 </div>
             </div>
         </div>

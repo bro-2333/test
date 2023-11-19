@@ -29,8 +29,8 @@ function Footer() {
           <span style={{display:'block',marginLeft:'5%',marginTop:'-5%',fontSize:'14px'}}>全球1000强，中国100强网站</span>
           <div className='footerBoxZwb'>
                 {
-                  list.map((item:any)=>{
-                    return <div className='box'>
+                  list.map((item:any,index:number)=>{
+                    return <div className='box' key={index}>
                       <h3>{item.num}</h3>
                       <span>{item.con}</span>
                     </div>
@@ -40,11 +40,11 @@ function Footer() {
         </div>
         <div className='mainBoxZwb'>
           {
-            dataList.map((item:any)=>{
-              return <ul className='ulList'>
+            dataList.map((item:any,i:number)=>{
+              return <ul className='ulList' key={i}>
                 {
                   item.map((v:any,index:number)=>{
-                    return <li className={index===0?'strong':''}>
+                    return <li className={index===0?'strong':''} key={index}>
                       {v}
                     </li>
                   })

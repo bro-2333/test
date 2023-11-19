@@ -447,7 +447,7 @@
     z-index: 22;
     left: 50%;
     top: 15%;
-    margin-left: -80px;
+    margin-left: -180px;
 }
 .login_right button{
     position: absolute;
@@ -667,7 +667,7 @@
 /* ----------------------h5盒子 */
 .all_main_h5_box1{
     width: 100%;
-    height: 400px;
+    height: 315px;
     margin-bottom: 60px;
    
 }
@@ -787,13 +787,16 @@
     margin-right: 15px;
 }
 .afterlogin_userinfo_box{
+   
     width: 93%;
     height: 60px;
     border-radius: 10px;
     background: #f5f7fb;
     margin-left: 10px;
     margin-top: 10px;
+     display: flex;
 }
+
 .afterlogin__main_con{
     width: 100%;
     height: 80px;
