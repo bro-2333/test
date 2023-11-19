@@ -7,16 +7,18 @@ import styled from 'styled-components';
 // 多个图片样式
 const ImageBoxWrapper = styled.div`
   position: relative;
-  width: 300px;
-  height: 600px;
+  width: 200px;
+  height: 300px;
   overflow: hidden;
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
   position: absolute;
+  top:0;
+  left:0;
   opacity: 0;
   transition: opacity 0.5s ease;
 `;
@@ -34,7 +36,9 @@ const ProgressBar = styled.div`
 
 const CardImg: React.FC = (prop:any) => {
 
-    const {imglist}=prop
+    const {cardImglist}=prop
+    // console.log('cardImglist',cardImglist);
+    
 
   const [isHovered, setIsHovered] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
@@ -79,7 +83,7 @@ const [currentImage, setCurrentImage] = useState(0);
   const handleMouseMove = (e: React.MouseEvent) => {
     const boxWidth = e.currentTarget.clientWidth;
     const percent = e.nativeEvent.offsetX / boxWidth;
-    const nextImage = Math.floor(percent * imglist.length);
+    const nextImage = Math.floor(percent * cardImglist.length);
     setCurrentImage(nextImage);
   };
 
@@ -96,25 +100,29 @@ const [currentImage, setCurrentImage] = useState(0);
   return (
     <div>
         {
-              <div
+          cardImglist.length==1 &&cardImglist.map((item :any,cardImgListIndex :any)=>{
+            return <div
+            key={cardImgListIndex}
                 className={`scrolling-box ${isHovered ? 'hovered' : ''}`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={handleMouseLeave}  
                 ref={boxRef}
                 >
                 <img
-                    src="https://img.zcool.cn/community/0167db5d5cf6dba8012187f4ff06ea.jpg@1280w_1l_2o_100sh.jpg" // 替换为你的图片 URL
+                    src={item} // 替换为你的图片 URL
                     alt="Scrolling Image"
                 />
                 </div>
+          })
+              
         }
-        {/* {
-            imglist.length>1 &&   <ImageBoxWrapper
+        {
+            cardImglist.length>1 &&   <ImageBoxWrapper
                     onMouseMove={handleMouseMove}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeavemore}
                     >
-                    {imglist.map((image :any, index :any) => (
+                    {cardImglist.map((image :any, index :any) => (
                         <Image
                         key={index}
                         src={image}
@@ -128,7 +136,7 @@ const [currentImage, setCurrentImage] = useState(0);
                         }}
                     />
                     </ImageBoxWrapper>
-        } */}
+        }
     </div>
     
    

@@ -1,40 +1,51 @@
 import React from 'react'
-import {useState,useEffect} from 'react'
-import api from '../api/axiosInstance'
+import {useState ,useEffect} from 'react'
+// import api from '../api/axiosInstance'
 import { AddO } from '@react-vant/icons';
 import logo from '../../public/cardimg/logo.webp'
 import '../layout/MiddleCard.css'
 import RightCard from './RightCard';
-function MiddleCard (){
+function MiddleCard (prop:any){
 
-  const [imgbol,setimgbol]: any=useState(false)
+  const {obj}=prop
+  // console.log(obj,'56789876546789765467');
+  
+  
+  
+
+  // const [imgbol,setimgbol]: any=useState(false)
 
   const [leftboxbol,setleftboxbol]=useState(false)
 
-  const [dataobj,setdataobj] :any=useState({})
+  // const [dataobj,setdataobj] :any=useState({})
 
   useEffect(() => {
-    api.get('/get/daytui').then((res)=>{
-      console.log(res,'res');
-      setdataobj(res.data)
-      // res.data.imglist.length>1?setimgbol(true):setimgbol(false)
-      res.data.lefttype?setleftboxbol(true):setleftboxbol(false)
-    })
+    // api.get('/get/daytui').then((res)=>{
+    //   console.log(res,'res');
+    //   setdataobj(res.data)
+    //   // res.data.imglist.length>1?setimgbol(true):setimgbol(false)
+    //   res.data.lefttype?setleftboxbol(true):setleftboxbol(false)
+    // })
 
+    obj.lefttype?setleftboxbol(true):setleftboxbol(false)
+    
 
   }, [])
+
+  
+  // setdataobj(obj)
 
  
   return (
     <div className='con_cardzong'>
       <div className="con_topbox">
-        <h2 className='con_fontTitle'>{dataobj.title}</h2>
+        <h2 className='con_fontTitle'>{obj.title}</h2>
         {
-          dataobj.titleChild && <div className='con_two_title'>{dataobj.titleChild}</div>
+          obj.titleChild && <div className='con_two_title'>{obj.titleChild}</div>
         }
         <div className="con_tabli">
           {
-            dataobj.tablist && dataobj.tablist.map((item,index)=>{
+            obj.tablist && obj.tablist.map((item :any,index :any)=>{
               return <div className='con_tabonly' key={index}>{item}</div>
             })
           }
@@ -58,7 +69,7 @@ function MiddleCard (){
             </div>
         }
         <div className="con_bot_rightbox">
-          <RightCard></RightCard>
+          <RightCard carditem={obj.cardlist}></RightCard>
         </div>
       </div>
 

@@ -1,7 +1,9 @@
-import React, { } from 'react'
+import React, { useEffect,useState } from 'react'
 
 import HeadLogo from '../components/HeadLogo'
 import AllMainRightCon from '../components/AllMainRightCon'
+
+import api from '../api/axiosInstance'
 
 import {
     HomeOutlined,
@@ -10,7 +12,50 @@ import {
     SettingOutlined
 } from '@ant-design/icons';
 
+
+  
+
+
+
 const Home = () => {
+
+    //多个
+  const [cardlist,setcardlist]=useState([])
+  // 单个
+  const [onlycard,setonlycard] :any=useState([])
+
+
+
+useEffect(() => {
+    // 获取多个
+      api.get('/get/cardimg').then((res)=>{
+      // console.log(res,'78912738');
+      setcardlist(res.data)
+
+    // console.log(cardlist,'123');
+
+    })
+
+    // 获取今日推荐
+     api.get('/get/daytui').then((res:any)=>{
+      // console.log(res,'res');
+      // const strrr:any=onlycard.push(res.data)
+      // console.log(strrr,'12341231231232');
+      
+      setonlycard(res.data)
+    //   console.log(onlycard,'456');
+      // console.log(onlycard,'789786876');
+      
+      // res.data.imglist.length>1?setimgbol(true):setimgbol(false)
+      // res.data.lefttype?setleftboxbol(true):setleftboxbol(false)
+    })
+
+
+}, [])
+
+
+
+
 
     return (
         <div>
@@ -45,7 +90,7 @@ const Home = () => {
                     </ul>
                 </div>
                 <div className="allmain_right">
-                    <AllMainRightCon />
+                    <AllMainRightCon cardlist={cardlist} onlycard={onlycard} />
                 </div>
             </div>
            

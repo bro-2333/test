@@ -7,10 +7,14 @@ import Footer from './Footer';
 import Master from './Master';
 import Lbtt from './Lbt'//轮播图
 import Scroll from './Scroll';//滚动
+// import api from '../api/axiosInstance'
 
 import MiddleCard from './MiddleCard';
 
-function AllMainRightCon() {
+function AllMainRightCon(prop :any) {
+  const {cardlist,onlycard}=prop
+  console.log(onlycard,'二级页面数据');
+  
   const { Search } = Input;
   const options = [
     {
@@ -62,6 +66,10 @@ function AllMainRightCon() {
 
   const [defaultValue, setdefaultValue] = useState('邀请函')
 
+  // //多个
+  // const [cardlist,setcardlist]=useState([])
+  // // 单个
+  // const [onlycard,setonlycard] :any=useState([])
 
   const calenDay = useCallback((day: number) => {
     switch (day) {
@@ -92,6 +100,35 @@ function AllMainRightCon() {
       setflag(false);
     }, 400);
   }
+
+
+
+  // useEffect(() => {
+  //   // 获取多个
+  //     api.get('/get/cardimg').then((res)=>{
+  //     // console.log(res,'78912738');
+  //     setcardlist(res.data)
+  //   })
+
+  //   // 获取今日推荐
+  //    api.get('/get/daytui').then((res:any)=>{
+  //     // console.log(res,'res');
+  //     // const strrr:any=onlycard.push(res.data)
+  //     // console.log(strrr,'12341231231232');
+      
+  //     setonlycard(res.data)
+  //     // console.log(onlycard,'789786876');
+      
+  //     // res.data.imglist.length>1?setimgbol(true):setimgbol(false)
+  //     // res.data.lefttype?setleftboxbol(true):setleftboxbol(false)
+  //   })
+  // }, [])
+
+  // console.log(onlycard,'172o3uiy23178923891');
+  
+
+
+
 
   return (
 
@@ -159,9 +196,14 @@ function AllMainRightCon() {
 
       {/* 所有h5展示盒子 */}
       <div className="all_main_h5_box1">
-        <div className="all_main_h5_con1">
-          <MiddleCard></MiddleCard>
-        </div>
+        {
+          onlycard && onlycard.map((item :any,index :any)=>{
+            return  <div className="all_main_h5_con1" key={index}>
+                      <MiddleCard obj={item}></MiddleCard>
+                    </div>
+          })
+        }
+       
       </div>
 
 
@@ -172,8 +214,14 @@ function AllMainRightCon() {
 
 
       {/* 所有h5展示盒子 */}
-      <div className="all_main_h5_box">
-
+      <div className="all_main_h5_box2">
+        {/* {
+          cardlist && cardlist.map((item,index)=>{
+            return <div className='all_main_h5_box_child' key={index}>
+              <MiddleCard key={index} obj={item}></MiddleCard>
+            </div>
+          })
+        } */}
       </div>
 
 

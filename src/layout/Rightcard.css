@@ -17,6 +17,7 @@
     text-align: center;
     flex: 0 0 auto; /* flex属性的简写形式，第一个值是flex-grow，第二个值是flex-shrink，第三个值是flex-basis */
 }
+
 .midcard_leftBox {
     position:absolute;
     left:3%;

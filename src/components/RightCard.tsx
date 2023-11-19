@@ -2,8 +2,13 @@ import React,{useState,useRef} from 'react'
 import '../layout/Rightcard.css'
 import OnlyCard from './OnlyCard'
 import { ArrowLeft,Arrow } from '@react-vant/icons';
-
-function RightCard() {
+import {
+  ArrowRightOutlined
+} from '@ant-design/icons';
+function RightCard(prop :any) {
+  const {carditem} = prop
+  console.log('carditem',carditem);
+  
   const containerRef = useRef<HTMLDivElement>(null)
   const [ways,setWays] = useState('left')
   const [scrollstup,setScrollStup] = useState(0) 
@@ -26,36 +31,22 @@ function RightCard() {
   return (
     <div className='midcard_Mac'>
       <div className='midcard_MasterBox' ref={containerRef}>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
+        {
+          carditem && carditem.map((item :any,carditemIndex:any)=>{
+            return  <div className='midcard_boxList' key={carditemIndex}>
+                        <OnlyCard carditem={item} ></OnlyCard>
+                    </div>
+          })
+
+          
+        }
+
+        <div className='midcard_boxList_btn'>
+           <div className="gomorepage">
+            <ArrowRightOutlined />
+           </div>
         </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
-        <div className='midcard_boxList'>
-            <OnlyCard></OnlyCard>
-        </div>
+       
         {/* {
           items.map((item:any) =>{
             return <div className='boxList'>
