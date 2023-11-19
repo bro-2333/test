@@ -215,13 +215,13 @@ function AllMainRightCon(prop :any) {
 
       {/* 所有h5展示盒子 */}
       <div className="all_main_h5_box2">
-        {/* {
-          cardlist && cardlist.map((item,index)=>{
+        {
+          cardlist && cardlist.map((item :any,index :any)=>{
             return <div className='all_main_h5_box_child' key={index}>
               <MiddleCard key={index} obj={item}></MiddleCard>
             </div>
           })
-        } */}
+        }
       </div>
 
 
