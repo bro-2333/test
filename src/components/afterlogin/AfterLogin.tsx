@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { EditOutlined, HeartOutlined, UserOutlined } from '@ant-design/icons';
 
 
 
 function AfterLogin() {
+  let [userInfo, setuserInfo]: any = useState({})
+  useEffect(() => {
+    let userinfo: any = JSON.parse(localStorage.getItem('userinfo') || '')
+    setuserInfo(userinfo)
+    console.log('user info', userinfo)
+  }, [])
+  let afterloginfreeData = [
+    '模板免费用', '版权商用', '无水印下载', '无广告'
+  ]
 
-let afterloginfreeData=[
-  '模板免费用','版权商用','无水印下载','无广告'
-]
+  const outLogin = () => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('userInfo')
+
+  }
   return (
     <div className='AfterLogin_box'>
       <div className="afterlogin_head_box">
-        <h4>JSno</h4>
-        <span>退出</span>
+        <h4>{userInfo.username}</h4>
+        <span onClick={outLogin}>退出</span>
       </div>
       <p style={{ fontSize: '10px' }}>升级会员享受更多权益 &gt;</p>
       <div className="afterlogin_middle_box">
@@ -21,20 +32,20 @@ let afterloginfreeData=[
           <button>升级会员</button>
         </div>
         <div className="step_box">
-        
+
         </div>
         <div className="afterlogin__main_con">
-            {
-              afterloginfreeData && afterloginfreeData.map((item)=>{
-                return<dl>
-                    <dt></dt>
-                    <dd>{item}</dd>
-                </dl>
-              })
-            }
+          {
+            afterloginfreeData && afterloginfreeData.map((item) => {
+              return <dl>
+                <dt></dt>
+                <dd>{item}</dd>
+              </dl>
+            })
+          }
         </div>
         <div className="afterlogin_button_box">
-            <button>查看更多权益</button>
+          <button>查看更多权益</button>
         </div>
       </div>
       <div className="afterlogin_footer_box">
@@ -52,7 +63,13 @@ let afterloginfreeData=[
         </div>
       </div>
       <div className="afterlogin_userinfo_box">
-
+        <img src={userInfo.img} alt="" style={{
+          width: '50px',
+          height: '50px',
+          borderRadius: '50%',
+          marginTop:'5px'
+          }}/>
+          <p style={{lineHeight:'60px'}}>{userInfo.username}</p>
       </div>
     </div>
   )

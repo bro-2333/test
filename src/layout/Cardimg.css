@@ -1,0 +1,28 @@
+/* BoxWithScrollingImage.css */
+.scrolling-box {
+  width: 200px; /* 调整盒子的宽度 */
+  height: 300px; /* 调整盒子的高度 */
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.scrolling-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease-in-out; /* 添加过渡效果 */
+}
+
+@keyframes scrollUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.scrolling-box:not(.hovered) img {
+  animation: none; /* 在非悬停状态下停止动画 */
+}
+
+.scrolling-box.hovered img {
+  animation: scrollUp 2s forwards; /* 使用动画效果 */
+}

@@ -29,15 +29,15 @@
 }
 .img_box img{
     width: 130px;
-    height: 22px;
-    margin-top: 20px;
+    /* height: px; */
+    margin-top: 15px;
 }
 .logo_hover_box{
     width: 200px;
     height: 80px;
     position: absolute;
     left: 40px;
-    top:-20px;
+    top:-15px;
     z-index: 23;
     display: none;
 }
@@ -151,11 +151,18 @@
     width: 100%;
     margin-top: 80px;
     height: calc(100% - 80px);
-    display: flex;
+    /* display: flex; */
 }
 /* 左侧盒子 */
 .allmain_left{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 80px;
     width: 200px;
+    overflow: hidden;
+    z-index: 9;
+    background: #fff;
 }
 .allmain_left ul li{
     list-style: none;
@@ -178,6 +185,7 @@
     line-height: 40px;
 }
 .allmain_right{
+    margin-left: 200px;
     max-width: 1704px;
     min-width: 1080px;
     /* background-color: pink; */
@@ -193,6 +201,7 @@
 .All_Main_Right_box{
    width: 100%;
    height: 100%;
+   overflow: scroll;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -299,6 +308,7 @@
     position: relative;
 }
 .all_master_box h3{
+    width: 1280px;
     font-size: 20px;
     padding-left: 10px;
 }
@@ -354,7 +364,7 @@
     left: 50%;
     top: 50%;
     margin-top: -200px;
-    margin-left: -300px;
+    margin-left: -400px;
     display: flex;
 }
 
@@ -386,22 +396,31 @@
 }
 
 .userinfo_box{
-    width: 300px;
+    width: 450px;
     height: 60px;
     /* background-color: pink; */
     position: absolute;
     left: 50%;
      top: 20%;
     margin-left: -150px;
+  
+}   
+.userinfo_con{
+  width: 300px;
     display: flex;
     justify-content:space-between;
-}   
+}
+.userinfo_con1{
+  width: 300px;
+    display: flex;
+    justify-content:space-between;
+}
 .userinfo_box p{
     font-size: 14px;
     line-height: 35px;
 }
 .userinfo_box1{
-    width: 300px;
+    width: 450px;
     height: 60px;
     /* background-color: pink; */
     position: absolute;
@@ -439,13 +458,16 @@
 }
 /* 轮播图俩组件 */
 .all_main_swiper{
-    width: 1280px;
+    overflow: hidden;
+    width: 100%;
     height: 350px;
-    float: left;
- 
+    /* float: left; */
+    
 }
 
-
+.all_main_swiper>.swiper{
+    width: 1280px;
+}
 
 
 
@@ -626,7 +648,186 @@
 
 
 
+/* 主页广告展位图 */
+.all_main_ads_box{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    /* background-color: pink; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.all_main_ads_box img{
+    border-radius: 10px;
+    width: 1280px;
+    height: 100%;
+}
 
 
+/* ----------------------h5盒子 */
+.all_main_h5_box1{
+    width: 100%;
+    height: 315px;
+    margin-bottom: 60px;
+   
+}
+.all_main_h5_con1{
+    width: 1280px;
+    height: 100%;
+     /* background-color: pink; */
+}
 
+/* 内容撑开高 */
+.all_main_h5_box2{
+    width: 100%;
+  background-color: pink;
+}
+.all_main_h5_con1{
+    width: 1280px;
+    height: 100%;
+}
+/* 登录后样式 */
 
+/* afterloginmain */
+.afterlogin_box{
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    right: 60px;
+    top: 60px;
+    box-shadow: 1px 5px 6px #f0f0f0;
+    z-index: 22;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+.AfterLogin_box{
+    width: 100%;
+    height: 100%;
+}
+.afterlogin_head_box{
+    width: 90%;
+    height: 40px;
+    margin-left: 20px;
+    display: flex;
+    align-content:flex-start;
+    justify-content:space-between;
+    /* background-color: red; */
+}
+.afterlogin_head_box h4{
+    line-height: 60px;
+}
+.afterlogin_head_box span{
+    display: block;
+    width: 35px;
+    text-align: center;
+    height: 20px;
+    background-color: #f4f4f4;
+    font-size: 11px;
+    border-radius: 5px;
+    color: #666;
+    margin-top: 20px;
+    line-height: 20px;
+}
+.AfterLogin_box p{
+    padding-left: 20px;
+    line-height: 30px;
+}
+.afterlogin_middle_box{
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(to bottom,#bed2eb,rgb(241, 243, 247));
+}
+.viptext_box{
+    margin-left: 15px;
+   width: 90%;
+   height: 40px;
+   display: flex; 
+    align-content:flex-start;
+    justify-content:space-between;
+}
+.viptext_box h4{
+    line-height: 60px;
+}
+.viptext_box button{
+    font-size: 12px;
+    width: 65px;
+    border-radius: 5px;
+    height: 25px;
+    background:linear-gradient(to right,#ebc46f,#d5a055);
+    color: #5f4015;
+    border: none;
+    margin-top: 20px;
+}
+.afterlogin_footer_box{
+    width: 100%;
+    display: flex;
+}
+.afterlogin_footer_con{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.08);
+    color: #333;
+    font-size: 12px;
+    height: 45px;
+    padding: 11px 0 8px;
+    text-align: center;
+    width: 85px;
+    margin-left: 11px;
+    margin-top: 10px;
+}
+.afterlogin_footer_con p{
+    text-align: center;
+    margin-right: 15px;
+}
+.afterlogin_userinfo_box{
+   
+    width: 93%;
+    height: 60px;
+    border-radius: 10px;
+    background: #f5f7fb;
+    margin-left: 10px;
+    margin-top: 10px;
+     display: flex;
+}
+
+.afterlogin__main_con{
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+.afterlogin__main_con dl{
+    width: 60px;
+    height: 80px;
+    margin-left: 20px;
+    /* background-color: pink; */
+}
+
+.afterlogin__main_con dl dt{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    margin-top: 10px;
+}
+.afterlogin__main_con dl dd{
+    font-size: 10px;
+    color: #666;
+    line-height: 30px;
+}
+.afterlogin_button_box{
+    width: 100%;
+    height: 40px;
+}
+.afterlogin_button_box button{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f4f9fe;
+    color: #666;
+    margin-left: 100px;
+    border-radius: 15px;
+    border: none;
+}

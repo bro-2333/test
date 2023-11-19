@@ -70,10 +70,10 @@ const generateCalendarData = (year:any, month:any) => {
 
   // 添加当前月的日期
   for (let i = 1; i <= totalDays; i++) {
-    console.log(year,month);
+    // console.log(year,month);
     
     const lunarDate = LunarCalendar.solarToLunar(year, month, i);
-    console.log(lunarDate);
+    // console.log(lunarDate);
     
     calendarData.push({
       day: i,
@@ -151,7 +151,7 @@ const Calendar = ({ year, month }) => {
                   <div className="lunar-day">{`${dayData.lunarInfo.GanZhiYear}${dayData.lunarInfo.GanZhiMonth}${dayData.lunarInfo.GanZhiDay}`}</div>
                   <div className="festival">{
                     dayData.festival['fast']?.map((item:any,index:any)=>{
-                      return <p>{item}</p>
+                      return <p key={index}>{item}</p>
                     })
                   }
                   </div>
@@ -168,15 +168,15 @@ const Calendar = ({ year, month }) => {
         <div className='carBox'>
           {
             carList.map((item:any,index:any)=>{
-              return <div className='boxCon'>
+              return <div className='boxCon' key={index}>
                 <div className='headBox'>
                   <span>{item.dayName}</span>
                   <span>{`剩${item.carDay}天`}</span>
                 </div>
                 <div className='mainBox'>
                   {
-                    item.data.map(key=>{
-                      return <p>{key}</p>
+                    item.data.map((key:any,i:number)=>{
+                      return <p key={i}>{key}</p>
                     })
                   }
                 </div>

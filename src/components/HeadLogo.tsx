@@ -1,8 +1,13 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Login from '../components/Login'
+import AfterLoginn from './afterlogin/AfterLoginn'
 import '../layout/sj_index.css'
+import '../layout/sj_afterloginn.css'
 function HeadLogo() {
+
+    let [loginbol, setloginbol] = useState(false)
+
     const navData = [
         {
             'id': 2,
@@ -24,11 +29,13 @@ function HeadLogo() {
             'tit': '下载App'
         }
     ]
+
+    let tokenvalue: any = localStorage.getItem('token')
     return (
         <div className='HeadLogo_box'>
             <div className="headlogo_main">
                 <div className="img_box">
-                    <img src="../../public/login_img/new_logo.svg" alt="" />
+                    <img src="../../public/login_img/logo.jpg" alt="" />
                     <div className="logo_hover_box">
                         <img src="../../public/login_img/favorite-guide.webp" alt="" />
                     </div>
@@ -56,10 +63,15 @@ function HeadLogo() {
                 </ul>
 
                 <div className="button_box">
-                    <Login />
-                    <div className="coupons_box">
-                        <img src="../../public/login_img/Coupons.webp" alt="" />
-                    </div>
+                    {
+                        tokenvalue ? <AfterLoginn /> : <Login />
+                    }
+                    {
+                        tokenvalue ? '' : <div className="coupons_box">
+                            <img src="../../public/login_img/Coupons.webp" alt="" />
+                        </div>
+                    }
+
                 </div>
             </div>
         </div>
