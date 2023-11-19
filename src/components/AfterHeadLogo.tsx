@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Login from '../components/Login'
+import AfterLoginn from '../components/afterlogin/AfterLoginn'
 import '../layout/sj_index.css'
 import { Input, Select, Space } from 'antd';
 function AfterHeadLogo() {
@@ -38,7 +39,8 @@ function AfterHeadLogo() {
             label: '解决方案',
         },
     ];
-    let [defaultValue, setdefaultValue] = useState('邀请函')
+    let [defaultValue, setdefaultValue] = useState('邀请函');
+    let tokenvalue: any = localStorage.getItem('token')
     const onSearch: any = (value: any) => console.log(value);
     const navData = [
         {
@@ -100,10 +102,15 @@ function AfterHeadLogo() {
                     </div>
                 </div>
                 <div className="afterbutton_box">
-                    <Login />
-                    <div className="aftercoupons_box">
-                        <img src="../../public/login_img/Coupons.webp" alt="" />
-                    </div>
+                    {
+                        tokenvalue ? <AfterLoginn /> : <Login />
+                    }
+                    {
+                        tokenvalue ? '' : <div className="aftercoupons_box">
+                            <img src="../../public/login_img/Coupons.webp" alt="" />
+                        </div>
+                    }
+
                 </div>
             </div>
         </div>

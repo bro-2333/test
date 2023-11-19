@@ -37,8 +37,8 @@ function Master() {
     <div className='Mac'>
       <div className='MasterBox' ref={containerRef}>
         {
-          items.map(item =>{
-            return <div className='boxList'>
+          items.map((item:any,index:number) =>{
+            return <div className='boxList' key={index}>
               <img src={item} alt="" />
             </div>
           })
