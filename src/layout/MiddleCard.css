@@ -13,7 +13,7 @@
     display: flex;
 }
 .con_fontTitle{
-    width: 200px;
+    /* width: 200px; */
     /* text-align: center; */
     line-height: 50px;
     padding-left: 20px;
@@ -40,7 +40,7 @@
     background-color: #f1f1f1;
     font-size: 13px;
     border-radius: 20px;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-top: 8px;
 }
 .con_tabonly:hover{
@@ -48,8 +48,9 @@
     font-weight: 900;
 }
 .con_lookmore{
-    margin-left: 45%;
-    line-height: 50px;
+   
+    margin-left: 20px;
+    line-height: 60px;
     font-size: 13px;
     color: #666;
 }
@@ -105,7 +106,13 @@
 }
 
 .con_bot_rightbox{
-    width: 1200px;
+    width: 1280px;
+    height: 400px;
+    padding-left: 20px;
+    margin-top: -20px;
+}
+.con_bot_rightbox_two{
+    width: 1080px;
     height: 400px;
     padding-left: 20px;
     margin-top: -20px;

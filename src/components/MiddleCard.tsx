@@ -5,12 +5,13 @@ import { AddO } from '@react-vant/icons';
 import logo from '../../public/cardimg/logo.webp'
 import '../layout/MiddleCard.css'
 import RightCard from './RightCard';
+import { useNavigate } from 'react-router-dom'
 function MiddleCard (prop:any){
 
   const {obj}=prop
   // console.log(obj,'56789876546789765467');
   
-  
+  const navigate=useNavigate()
   
 
   // const [imgbol,setimgbol]: any=useState(false)
@@ -32,6 +33,10 @@ function MiddleCard (prop:any){
 
   }, [])
 
+  const gomorepages=()=>{
+    navigate('/details')
+  }
+
   
   // setdataobj(obj)
 
@@ -50,7 +55,7 @@ function MiddleCard (prop:any){
             })
           }
         </div>
-        <div className="con_lookmore">查看更多&gt;</div>
+        <div className="con_lookmore" onClick={gomorepages}>查看更多&gt;</div>
       </div>
       <div className="con_botombox">
         {
@@ -68,7 +73,7 @@ function MiddleCard (prop:any){
               </div>
             </div>
         }
-        <div className="con_bot_rightbox">
+        <div className={leftboxbol?"con_bot_rightbox_two" :"con_bot_rightbox"}>
           <RightCard carditem={obj.cardlist}></RightCard>
         </div>
       </div>

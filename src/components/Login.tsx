@@ -4,21 +4,21 @@ import { Button, message, Space } from 'antd';
 import { Input } from 'antd';
 import QRCode from 'qrcode.react';
 import { UserOutlined } from '@ant-design/icons';
-<<<<<<< HEAD
+
 import DingCode from '../components/DingCode'
-function Login() {
-=======
+
+
 import axiosInstance from '../api/axiosInstance';
 // import { message} from 'antd';
 // const [messageApi] = message.useMessage();
 function Login(prop: any) {
-    let { onChangeLogintype } = prop
+    const { onChangeLogintype } = prop
     const [messageApi, contextHolder] = message.useMessage();
->>>>>>> 013bd0b718ce9e7a5eba38877e91affde4cd5314
-    let [showElem, setshowElem] = useState(false);
-    let [showCon, setshowCon] = useState("");
-    let [userName, setuserName] = useState('')
-    let [password, setpassword] = useState('')
+
+    const [showElem, setshowElem] = useState(false);
+    const [showCon, setshowCon] = useState("");
+    const [userName, setuserName] = useState('')
+    const [password, setpassword] = useState('')
 
 
 
@@ -27,7 +27,7 @@ function Login(prop: any) {
 
     // 点击登录
 
-    let [loginTrue, setloginTrue] = useState(false)
+    const [loginTrue, setloginTrue] = useState(false)
     const goLogin = (e: any) => {
         setshowElem(true)
         setshowCon(e)
@@ -37,9 +37,9 @@ function Login(prop: any) {
     const pswValue = (value: any) => {
         setpassword(value.target.value)
     }
-<<<<<<< HEAD
+
     
-=======
+
     const userNameValue = (value: any) => {
         setuserName(value.target.value)
     }
@@ -82,7 +82,6 @@ function Login(prop: any) {
 
     }
 
->>>>>>> 013bd0b718ce9e7a5eba38877e91affde4cd5314
     return (
         <div className="login_box">
             {contextHolder}
@@ -127,11 +126,10 @@ function Login(prop: any) {
                             /> */}
                             <DingCode />
                         </div>
-<<<<<<< HEAD
                         {/* <Button size="large" type="primary"  onClick={close}>登 &emsp;&emsp; 录</Button> */}
-=======
+
                         <Button size="large" type="primary" onClick={close}>登 &emsp;&emsp; 录</Button>
->>>>>>> 013bd0b718ce9e7a5eba38877e91affde4cd5314
+
                     </div>
                 </div>
             </div>

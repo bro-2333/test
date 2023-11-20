@@ -5,16 +5,9 @@ import lunarFestivals from '../data/data'
 import Calendar from './Calendar';
 import Footer from './Footer';
 import Master from './Master';
-<<<<<<< HEAD
  import Lbtt from './Lbt'//轮播图
  import Scroll from './Scroll';//滚动
-=======
-import Lbtt from './Lbt'//轮播图
-import Scroll from './Scroll';//滚动
-// import api from '../api/axiosInstance'
-
-import MiddleCard from './MiddleCard';
->>>>>>> 013bd0b718ce9e7a5eba38877e91affde4cd5314
+ import MiddleCard from './MiddleCard';
 
 function AllMainRightCon(prop :any) {
   const {cardlist,onlycard}=prop

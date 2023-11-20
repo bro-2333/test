@@ -4,6 +4,7 @@
   height: 300px; /* 调整盒子的高度 */
   overflow: hidden;
   border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .scrolling-box img {
