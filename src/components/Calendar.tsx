@@ -25,7 +25,7 @@ carListTime.map((time) => {
     })
   }
 })
-console.log(carList);
+// console.log(carList);
 
 
 
