@@ -17,12 +17,13 @@
     /* text-align: center; */
     line-height: 50px;
     padding-left: 20px;
+    flex: 1;
 }
 .con_two_title{
     width: 100px;
     color: rgba(179, 124, 83);
     font-size: 13px;
-    margin-left: -80px;
+    /* margin-left: 0px; */
     padding-top: 20px;
 
 }
@@ -31,6 +32,7 @@
     margin-left: 50px;
     display: flex;
     margin-top: 5px;
+    width: 740px;
 }
 .con_tabonly{
     height: 30px;
@@ -48,12 +50,12 @@
     font-weight: 900;
 }
 .con_lookmore{
-   
+   width: 100px;
     margin-left: 20px;
     line-height: 60px;
     font-size: 13px;
     color: #666;
-}
+    }
 .con_lookmore:hover{
     color: blue;
 }

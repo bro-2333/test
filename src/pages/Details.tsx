@@ -59,7 +59,9 @@ function Details() {
             </ul>
           </div>
           <div className="topchoosebox_main">
-            瀑布流内容
+            <div className="Waterfall_flow">
+              111
+            </div>
           </div>
         </div>
       </div>

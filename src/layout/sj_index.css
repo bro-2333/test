@@ -477,7 +477,7 @@
     width: 100%;
 }
 .topchoosebox_out{
-    width: 100%;
+    width: 1280px;
     height: 220px;
     /* background-color: pink; */
 }
@@ -639,12 +639,6 @@
 
 
 
-/* 瀑布流内容 */
-.topchoosebox_main{
-    width: 100%;
-    height: calc(100% - 280px);
-    background-color: pink;
-}
 
 
 
@@ -835,4 +829,18 @@
     margin-left: 100px;
     border-radius: 15px;
     border: none;
+}
+
+
+
+
+/* 瀑布流内容 */
+.topchoosebox_main{
+    width: 100%;
+    height: calc(100% - 280px);
+  
+}
+.Waterfall_flow{
+    width: 1280px;
+      background-color: pink;
 }
