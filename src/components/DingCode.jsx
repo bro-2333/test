@@ -18,9 +18,9 @@ export default class DingCode extends React.Component{
         var obj =window.DDLogin({
             id:"login_container",
             goto: URL,
-            style: "border:none;background-color:#FFFFFF;",
-            width : "400",
-            height: "400",
+            style: "border:none;background-color:#ffffff;",
+            width : "300",
+            height: "300",
         });
         let loginTmpCode
         if(typeof window.addEventListener != "undefined"){
@@ -34,7 +34,7 @@ export default class DingCode extends React.Component{
     }
     render(){
         return (
-                <div id='login_container'></div>
+                <div id='login_container' style={{marginTop: '-40px',marginLeft:'20px'}}></div>
         )
     }
 }
